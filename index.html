@@ -95,10 +95,85 @@
             top: 0;
         }
 
+        /* Top Utility Bar for Language Selector */
+        .top-utility-bar {
+            width: 100%;
+            background-color: rgba(226, 232, 240, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-slate);
+            padding: 0.75rem 2rem;
+        }
+
+        .top-utility-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .lang-switch-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.25rem;
+        }
+
+        .lang-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .lang-switch-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: rgba(241, 245, 249, 0.9);
+            padding: 0.25rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-slate);
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background-color: var(--text-primary);
+            color: #ffffff;
+        }
+
+        .flag-icon {
+            width: 14px;
+            height: 10px;
+            object-fit: cover;
+            border-radius: 1px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Layout Architecture Container */
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 2rem 2rem 3rem 2rem;
         }
 
         header {
@@ -175,49 +250,6 @@
 
         .contact-info a:hover {
             color: var(--accent-corporate);
-        }
-
-        /* Language Toggle UI Controls */
-        .lang-switch-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            background: var(--tag-bg);
-            padding: 0.35rem 0.65rem;
-            border-radius: 20px;
-            border: 1px solid var(--border-slate);
-        }
-
-        .lang-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-            padding: 0.15rem 0.45rem;
-            border-radius: 12px;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn:hover {
-            color: var(--text-primary);
-        }
-
-        .lang-btn.active {
-            background-color: var(--text-primary);
-            color: #ffffff;
-        }
-
-        .flag-icon {
-            width: 16px;
-            height: 12px;
-            object-fit: cover;
-            border-radius: 2px;
-            border: 1px solid rgba(0,0,0,0.1);
         }
 
         .pdf-download-btn {
@@ -649,6 +681,22 @@
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <div class="top-utility-bar">
+        <div class="top-utility-inner">
+            <div class="lang-switch-wrapper">
+                <div class="lang-label" data-en="View in" data-es="Ver en">View in</div>
+                <div class="lang-switch-container">
+                    <button class="lang-btn active" id="btn-lang-en" onclick="setGlobalAppLanguage('en')" aria-label="Switch page to English">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="" class="flag-icon"> EN
+                    </button>
+                    <button class="lang-btn" id="btn-lang-es" onclick="setGlobalAppLanguage('es')" aria-label="Cambiar página a Español">
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" alt="" class="flag-icon"> ES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         
         <header>
@@ -665,15 +713,6 @@
                         <span>📍 Toronto, ON</span>
                         <span>📞 <a href="tel:+16472410612">(647) 241-0612</a></span>
                         <span>✉️ <a href="mailto:alx886@gmail.com">alx886@gmail.com</a></span>
-                        
-                        <div class="lang-switch-container">
-                            <button class="lang-btn active" id="btn-lang-en" onclick="setGlobalAppLanguage('en')" aria-label="Switch page to English">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="" class="flag-icon"> EN
-                            </button>
-                            <button class="lang-btn" id="btn-lang-es" onclick="setGlobalAppLanguage('es')" aria-label="Cambiar página a Español">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" alt="" class="flag-icon"> ES
-                            </button>
-                        </div>
                     </div>
                     
                     <a href="https://alx886.github.io/myresume/Manuel%20Orellana%20Resume%202026.pdf" 
@@ -829,7 +868,6 @@
                                 data-es="<strong>Ingeniería de Contenido Técnico:</strong> Diseñó documentación de capacitación integral, manuales operativos y diagramas de sistemas que abarcaban la gestión de usuarios de Active Directory, túneles VPN seguros complejos y suites de comunicación empresarial."></li>
                         </ul>
                     </article>
-                </ul class="job-bullets">
                 </section>
 
             </main>
