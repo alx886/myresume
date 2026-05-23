@@ -1,1681 +1,665 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Manuel Orellana | Technical Solutions Consultant & Full-Stack Innovator</title>
-
     <meta name="description" content="Professional web portfolio of Manuel Orellana, an award-winning Technical Solutions Consultant with 25 years of expertise in enterprise workflows, document systems, and full-stack web applications.">
-
     
-
     <meta name="robots" content="index, follow">
-
     <meta name="keywords" content="Manuel Orellana, Technical Solutions Consultant, Systems Innovator, Intune MDM, imageFORCE, Canon Canada, Full-Stack Web Development, Toronto Tech Consultant">
-
     <link rel="canonical" href="https://alx886.github.io/myresume/">
 
-
-
     <meta property="og:type" content="profile">
-
     <meta property="og:title" content="Manuel Orellana | Technical Solutions Consultant & Full-Stack Innovator">
-
     <meta property="og:description" content="25+ years of cross-functional excellence in enterprise engineering, technical operations, and full-stack system architecture.">
-
     <meta property="og:url" content="https://alx886.github.io/myresume/">
-
     <meta property="og:image" content="https://i.ibb.co/hxCX8r30/Profile-Picture-2.png">
 
-
-
     <script type="application/ld+json">
-
     {
-
       "@context": "https://schema.org",
-
       "@type": "Person",
-
       "name": "Manuel Orellana",
-
       "jobTitle": "Technical Solutions Consultant & Full-Stack Systems Innovator",
-
       "worksFor": {
-
         "@type": "Organization",
-
         "name": "Canon Canada Inc."
-
       },
-
       "url": "https://alx886.github.io/myresume/",
-
       "image": "https://i.ibb.co/hxCX8r30/Profile-Picture-2.png",
-
       "sameAs": [
-
         "https://www.linkedin.com/in/manuel-orellana-41538012/"
-
       ],
-
       "address": {
-
         "@type": "PostalAddress",
-
         "addressLocality": "Toronto",
-
         "addressRegion": "ON",
-
         "addressCountry": "CA"
-
       }
-
     }
-
     </script>
 
-
-
     <style>
-
         /* Professional Light Grey & Slate CSS Variable Definitions */
-
         :root {
-
             --text-primary: #0f172a;     
-
             --text-secondary: #334155;   
-
             --accent-corporate: #1d4ed8; 
-
             --accent-hover: #1e40af;
-
             --accent-pdf: #ee3124;      
-
             --accent-pdf-hover: #c92216;
-
             --border-slate: #cbd5e1;     
-
             --tag-bg: #e2e8f0;           
-
             --card-bg: rgba(241, 245, 249, 0.8); 
-
             --form-control-bg: #f1f5f9;  
-
             --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
         }
-
-
 
         * {
-
             box-sizing: border-box;
-
             margin: 0;
-
             padding: 0;
-
         }
-
-
 
         body {
-
             color: var(--text-primary);
-
             font-family: var(--font-stack);
-
             line-height: 1.6;
-
             padding: 0;
-
             min-height: 100vh;
-
             background-color: #e2e8f0;
-
             background-image: 
-
                 radial-gradient(at 0% 0%, #cbd5e1 0px, transparent 65%),
-
                 radial-gradient(at 100% 0%, #e2e8f0 0px, transparent 60%),
-
                 radial-gradient(at 100% 100%, #94a3b8 0px, transparent 40%),
-
                 radial-gradient(at 0% 100%, #cbd5e1 0px, transparent 70%);
-
             background-attachment: fixed;
-
         }
-
-
 
         .skip-link {
-
             position: absolute;
-
             top: -40px;
-
             left: 0;
-
             background: var(--accent-corporate);
-
             color: white;
-
             padding: 8px;
-
             z-index: 100;
-
             transition: top 0.2s;
-
             text-decoration: none;
-
             font-size: 0.9rem;
-
             font-weight: 500;
-
         }
-
-
 
         .skip-link:focus {
-
             top: 0;
-
         }
-
-
-
-        /* Top Utility Bar for Language Selector */
-
-        .top-utility-bar {
-
-            width: 100%;
-
-            background-color: rgba(226, 232, 240, 0.9);
-
-            backdrop-filter: blur(8px);
-
-            -webkit-backdrop-filter: blur(8px);
-
-            border-bottom: 1px solid var(--border-slate);
-
-            padding: 0.75rem 2rem;
-
-        }
-
-
-
-        .top-utility-inner {
-
-            max-width: 1100px;
-
-            margin: 0 auto;
-
-            display: flex;
-
-            justify-content: flex-end;
-
-        }
-
-
-
-        .lang-switch-wrapper {
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: flex-end;
-
-            gap: 0.25rem;
-
-        }
-
-
-
-        .lang-label {
-
-            font-size: 0.75rem;
-
-            font-weight: 700;
-
-            color: var(--text-secondary);
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.05em;
-
-        }
-
-
-
-        .lang-switch-container {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 0.25rem;
-
-            background: rgba(241, 245, 249, 0.9);
-
-            padding: 0.25rem;
-
-            border-radius: 20px;
-
-            border: 1px solid var(--border-slate);
-
-        }
-
-
-
-        .lang-btn {
-
-            background: none;
-
-            border: none;
-
-            cursor: pointer;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 0.35rem;
-
-            font-size: 0.75rem;
-
-            font-weight: 700;
-
-            color: var(--text-secondary);
-
-            padding: 0.25rem 0.6rem;
-
-            border-radius: 12px;
-
-            transition: all 0.2s ease;
-
-        }
-
-
-
-        .lang-btn:hover {
-
-            color: var(--text-primary);
-
-        }
-
-
-
-        .lang-btn.active {
-
-            background-color: var(--text-primary);
-
-            color: #ffffff;
-
-        }
-
-
-
-        .flag-icon {
-
-            width: 14px;
-
-            height: 10px;
-
-            object-fit: cover;
-
-            border-radius: 1px;
-
-            border: 1px solid rgba(0,0,0,0.1);
-
-        }
-
-
-
-        /* Layout Architecture Container */
 
         .container {
-
             max-width: 1100px;
-
             margin: 0 auto;
-
-            padding: 2rem 2rem 3rem 2rem;
-
+            padding: 3rem 2rem;
         }
-
-
 
         header {
-
             display: grid;
-
             grid-template-columns: 1fr;
-
             gap: 2rem;
-
             align-items: center;
-
             padding-bottom: 3rem;
-
             border-bottom: 1px solid var(--border-slate);
-
             margin-bottom: 3rem;
-
         }
-
-
 
         @media (min-width: 768px) {
-
             header {
-
                 grid-template-columns: 180px 1fr;
-
             }
-
         }
-
-
 
         .profile-img {
-
             width: 180px;
-
             height: 180px;
-
             border-radius: 50%;
-
             object-fit: cover;
-
             object-position: center 18%; 
-
             border: 1px solid var(--border-slate);
-
             box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
-
         }
-
-
 
         .header-text h1 {
-
             font-size: 2.5rem;
-
             font-weight: 800;
-
             letter-spacing: -0.04em;
-
             margin-bottom: 0.25rem;
-
             color: var(--text-primary);
-
         }
-
-
 
         .header-text h1 span {
-
             color: var(--accent-corporate);
-
             font-weight: 400;
-
         }
-
-
 
         .tagline {
-
             font-size: 1.2rem;
-
             color: var(--text-secondary);
-
             margin-bottom: 1.25rem;
-
             font-weight: 600;
-
             letter-spacing: -0.01em;
-
         }
-
-
 
         .contact-layout-wrapper {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             flex-wrap: wrap;
-
             gap: 1.5rem;
-
         }
-
-
 
         .contact-info {
-
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 1.5rem;
-
             font-size: 0.9rem;
-
             color: var(--text-secondary);
-
             font-weight: 500;
-
             align-items: center;
-
         }
-
-
 
         .contact-info a {
-
             color: var(--text-primary);
-
             text-decoration: none;
-
             font-weight: 700;
-
             transition: color 0.2s;
-
         }
-
-
 
         .contact-info a:hover {
-
             color: var(--accent-corporate);
-
         }
 
+        /* Language Toggle UI Controls */
+        .lang-switch-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--tag-bg);
+            padding: 0.35rem 0.65rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-slate);
+        }
 
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            padding: 0.15rem 0.45rem;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background-color: var(--text-primary);
+            color: #ffffff;
+        }
+
+        .flag-icon {
+            width: 16px;
+            height: 12px;
+            object-fit: cover;
+            border-radius: 2px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
 
         .pdf-download-btn {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 0.6rem;
-
             background-color: var(--accent-pdf);
-
             color: #ffffff !important;
-
             text-decoration: none;
-
             padding: 0.65rem 1.2rem;
-
             border-radius: 6px;
-
             font-size: 0.85rem;
-
             font-weight: 700;
-
             transition: background-color 0.2s ease, transform 0.1s ease;
-
             box-shadow: 0 4px 10px rgba(238, 49, 36, 0.15);
-
             border: none;
-
             cursor: pointer;
-
         }
-
-
 
         .pdf-download-btn:hover {
-
             background-color: var(--accent-pdf-hover);
-
             transform: translateY(-1px);
-
         }
-
-
 
         .main-layout {
-
             display: grid;
-
             grid-template-columns: 1fr;
-
             gap: 4rem;
-
         }
-
-
 
         @media (min-width: 992px) {
-
             .main-layout {
-
                 grid-template-columns: 2fr 1fr;
-
             }
-
         }
-
-
 
         section {
-
             margin-bottom: 3rem;
-
         }
-
-
 
         h2 {
-
             font-size: 1.1rem;
-
             margin-bottom: 1.75rem;
-
             text-transform: uppercase;
-
             letter-spacing: 0.08em;
-
             color: var(--text-primary);
-
             font-weight: 700;
-
             display: flex;
-
             align-items: center;
-
             gap: 0.75rem;
-
         }
-
-
 
         h2::after {
-
             content: '';
-
             flex-grow: 1;
-
             height: 1px;
-
             background: var(--border-slate);
-
         }
-
-
 
         .highlights-grid {
-
             display: grid;
-
             grid-template-columns: 1fr;
-
             gap: 1.25rem;
-
             margin-bottom: 2.5rem;
-
         }
-
-
 
         @media (min-width: 600px) {
-
             .highlights-grid {
-
                 grid-template-columns: 1fr 1fr;
-
             }
-
         }
-
-
 
         .stat-card {
-
             background: var(--card-bg);
-
             backdrop-filter: blur(8px);
-
             -webkit-backdrop-filter: blur(8px);
-
             padding: 1.5rem;
-
             border-radius: 8px;
-
             border: 1px solid var(--border-slate);
-
             box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
-
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-
         }
-
-
 
         .stat-card:hover {
-
             transform: translateY(-2px);
-
             box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
-
         }
-
-
 
         .stat-card strong {
-
             display: block;
-
             font-size: 1.15rem;
-
             color: var(--accent-corporate);
-
             margin-bottom: 0.35rem;
-
             font-weight: 700;
-
         }
-
-
 
         .stat-card p {
-
             font-size: 0.9rem;
-
             color: var(--text-secondary);
-
             font-weight: 500;
-
         }
-
-
 
         .job-card {
-
             margin-bottom: 2.5rem;
-
             background: var(--card-bg);
-
             backdrop-filter: blur(8px);
-
             -webkit-backdrop-filter: blur(8px);
-
             padding: 1.75rem;
-
             border-radius: 8px;
-
             border: 1px solid var(--border-slate);
-
             box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
-
         }
-
-
 
         .job-header {
-
             display: flex;
-
             justify-content: space-between;
-
             flex-wrap: wrap;
-
             align-items: baseline;
-
             margin-bottom: 1.25rem;
-
             gap: 0.5rem;
-
         }
-
-
 
         .job-title {
-
             font-size: 1.25rem;
-
             color: var(--text-primary);
-
             font-weight: 700;
-
             letter-spacing: -0.02em;
-
         }
-
-
 
         .job-company {
-
             color: var(--text-secondary);
-
             font-weight: 600;
-
             font-size: 0.95rem;
-
             margin-top: 0.15rem;
-
             display: inline-block;
-
         }
-
-
 
         .job-date {
-
             font-size: 0.85rem;
-
             font-weight: 700;
-
             color: var(--text-primary);
-
             background: var(--tag-bg);
-
             padding: 0.2rem 0.6rem;
-
             border-radius: 4px;
-
             border: 1px solid var(--border-slate);
-
         }
-
-
 
         .job-bullets {
-
             list-style-type: none;
-
         }
-
-
 
         .job-bullets li {
-
             position: relative;
-
             padding-left: 1.25rem;
-
             margin-bottom: 0.85rem;
-
             color: var(--text-secondary);
-
             font-size: 0.95rem;
-
             font-weight: 500;
-
         }
-
-
 
         .job-bullets li::before {
-
             content: "→";
-
             position: absolute;
-
             left: 0;
-
             color: var(--accent-corporate);
-
             font-weight: bold;
-
         }
-
-
 
         .skills-group {
-
             margin-bottom: 1.75rem;
-
         }
-
-
 
         .skills-group h3 {
-
             font-size: 0.9rem;
-
             color: var(--text-primary);
-
             margin-bottom: 0.75rem;
-
             text-transform: uppercase;
-
             letter-spacing: 0.03em;
-
         }
-
-
 
         .skills-tags {
-
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 0.5rem;
-
         }
-
-
 
         .tag {
-
             background: var(--tag-bg);
-
             color: var(--text-secondary);
-
             padding: 0.35rem 0.75rem;
-
             border-radius: 6px;
-
             font-size: 0.85rem;
-
             font-weight: 600;
-
             border: 1px solid var(--border-slate);
-
             transition: all 0.2s ease;
-
         }
-
-
 
         .tag:hover {
-
             border-color: #94a3b8;
-
             background-color: #cbd5e1;
-
             color: var(--text-primary);
-
         }
-
-
 
         .linkedin-badge-btn {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 0.5rem;
-
             background-color: #0077b5; 
-
             color: #ffffff;
-
             text-decoration: none;
-
             padding: 0.7rem 1.2rem;
-
             border-radius: 6px;
-
             font-size: 0.9rem;
-
             font-weight: 600;
-
             transition: background-color 0.2s ease, transform 0.1s ease;
-
             box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2);
-
             width: 100%;
-
             justify-content: center;
-
             margin-bottom: 1.25rem;
-
         }
-
-
 
         .linkedin-badge-btn:hover {
-
             background-color: #005582;
-
             transform: translateY(-1px);
-
         }
-
-
 
         .carousel-wrapper {
-
             position: relative;
-
             background: var(--card-bg);
-
             backdrop-filter: blur(8px);
-
             -webkit-backdrop-filter: blur(8px);
-
             border: 1px solid var(--border-slate);
-
             border-radius: 8px;
-
             padding: 1.5rem;
-
             overflow: hidden;
-
             min-height: 200px;
-
             box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
-
         }
-
-
 
         .carousel-track {
-
             position: relative;
-
             height: 100%;
-
         }
-
-
 
         .carousel-item {
-
             position: absolute;
-
             top: 0;
-
             left: 0;
-
             width: 100%;
-
             opacity: 0;
-
             visibility: hidden;
-
             transition: opacity 0.5s ease, visibility 0.5s ease;
-
             display: flex;
-
             flex-direction: column;
-
             text-decoration: none;
-
             color: inherit;
-
         }
-
-
 
         .carousel-item.active {
-
             position: relative;
-
             opacity: 1;
-
             visibility: visible;
-
         }
-
-
 
         .recommendation-text {
-
             font-style: italic;
-
             font-size: 0.9rem;
-
             color: var(--text-secondary);
-
             line-height: 1.6;
-
             margin-bottom: 1rem;
-
             display: -webkit-box;
-
             -webkit-line-clamp: 5;
-
             -webkit-box-orient: vertical;
-
             overflow: hidden;
-
             font-weight: 500;
-
         }
-
-
 
         .carousel-item:hover .recommendation-text {
-
             color: var(--text-primary);
-
         }
-
-
 
         .recommendation-author {
-
             font-size: 0.85rem;
-
             font-weight: 700;
-
             color: #0077b5;
-
         }
-
-
 
         .recommendation-title {
-
             font-size: 0.75rem;
-
             color: var(--text-secondary);
-
             margin-top: 0.15rem;
-
             font-weight: 600;
-
         }
-
-
 
         .carousel-controls {
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             margin-top: 1.25rem;
-
             padding-top: 0.75rem;
-
             border-top: 1px dashed var(--border-slate);
-
         }
-
-
 
         .carousel-btn {
-
             background: none;
-
             border: none;
-
             color: var(--text-secondary);
-
             cursor: pointer;
-
             font-size: 0.8rem;
-
             font-weight: 700;
-
             padding: 0.25rem 0.5rem;
-
             border-radius: 4px;
-
             transition: all 0.2s;
-
         }
-
-
 
         .carousel-btn:hover {
-
             color: var(--text-primary);
-
             background-color: var(--tag-bg);
-
         }
-
-
 
         .carousel-indicators {
-
             display: flex;
-
             gap: 0.4rem;
-
         }
-
-
 
         .indicator-dot {
-
             width: 6px;
-
             height: 6px;
-
             border-radius: 50%;
-
             background-color: #94a3b8;
-
             transition: background-color 0.2s;
-
         }
-
-
 
         .indicator-dot.active {
-
             background-color: #0077b5;
-
         }
-
-
 
         .form-group {
-
             margin-bottom: 1.25rem;
-
         }
-
-
 
         .form-group label {
-
             display: block;
-
             font-size: 0.8rem;
-
             color: var(--text-secondary);
-
             margin-bottom: 0.4rem;
-
             font-weight: 700;
-
             text-transform: uppercase;
-
             letter-spacing: 0.02em;
-
         }
-
-
 
         .form-control {
-
             width: 100%;
-
             background-color: var(--form-control-bg);
-
             border: 1px solid var(--border-slate);
-
             border-radius: 6px;
-
             padding: 0.65rem;
-
             color: var(--text-primary);
-
             font-family: var(--font-stack);
-
             font-size: 0.9rem;
-
             font-weight: 500;
-
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
-
         }
-
-
 
         .form-control:focus {
-
             outline: none;
-
             border-color: var(--accent-corporate);
-
             box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
-
             background-color: #e2e8f0;
-
         }
-
-
 
         textarea.form-control {
-
             resize: vertical;
-
             min-height: 100px;
-
         }
-
-
 
         .form-actions {
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 0.75rem;
-
             margin-top: 1.5rem;
-
         }
-
-
 
         .btn {
-
             font-family: var(--font-stack);
-
             font-size: 0.85rem;
-
             font-weight: 700;
-
             padding: 0.65rem;
-
             border-radius: 6px;
-
             cursor: pointer;
-
             border: none;
-
             transition: all 0.2s ease;
-
             text-align: center;
-
         }
-
-
 
         .btn-submit {
-
             background-color: var(--accent-corporate);
-
             color: #ffffff;
-
             box-shadow: 0 2px 4px rgba(29, 78, 216, 0.1);
-
         }
-
-
 
         .btn-submit:hover {
-
             background-color: var(--accent-hover);
-
         }
-
-
 
         .btn-clear {
-
             background-color: var(--tag-bg);
-
             color: var(--text-secondary);
-
             border: 1px solid var(--border-slate);
-
         }
-
-
 
         .btn-clear:hover {
-
             background-color: #cbd5e1;
-
             color: var(--text-primary);
-
         }
-
-
 
         footer {
-
             text-align: center;
-
             padding: 3rem 0 1rem 0;
-
             margin-top: 5rem;
-
             border-top: 1px solid var(--border-slate);
-
             color: var(--text-secondary);
-
             font-size: 0.85rem;
-
             font-weight: 600;
-
         }
-
     </style>
-
 </head>
-
 <body>
-
-
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-
-
-    <div class="top-utility-bar">
-
-        <div class="top-utility-inner">
-
-            <div class="lang-switch-wrapper">
-
-                <div class="lang-label" data-en="View in" data-es="Ver en">View in</div>
-
-                <div class="lang-switch-container">
-
-                    <button class="lang-btn active" id="btn-lang-en" onclick="setGlobalAppLanguage('en')" aria-label="Switch page to English">
-
-                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="" class="flag-icon"> EN
-
-                    </button>
-
-                    <button class="lang-btn" id="btn-lang-es" onclick="setGlobalAppLanguage('es')" aria-label="Cambiar página a Español">
-
-                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" alt="" class="flag-icon"> ES
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
     <div class="container">
-
         
-
         <header>
-
             <img src="https://i.ibb.co/hxCX8r30/Profile-Picture-2.png" alt="Manuel Orellana Portrait" class="profile-img" crossorigin="anonymous">
-
             <div class="header-text">
-
                 <h1>MANUEL <span>ORELLANA</span></h1>
-
                 <div class="tagline" 
-
                      data-en="Technical Solutions Consultant & Full-Stack Systems Innovator" 
-
                      data-es="Consultor de Soluciones Técnicas e Innovador Full-Stack">
-
                      Technical Solutions Consultant & Full-Stack Systems Innovator
-
                 </div>
-
-                <div class="contact-layout-wrapper">
-
-                    <div class="contact-info">
-
-                        <span>📍 Toronto, ON</span>
-
-                        <span>📞 <a href="tel:+16472410612">(647) 241-0612</a></span>
-
-                        <span>✉️ <a href="mailto:alx886@gmail.com">alx886@gmail.com</a></span>
-
-                    </div>
-
-                    
-
-                    <a href="https://alx886.github.io/myresume/Manuel%20Orellana%20Resume%202026.pdf" 
-
-                       download="Manuel_Orellana_Resume_2026.pdf" 
-
-                       class="pdf-download-btn" 
-
-                       data-en-title="Download Official Resume PDF"
-
-                       data-es-title="Descargar Currículum Oficial en PDF">
-
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 16px; height: 16px; fill: currentColor; vertical-align: middle;">
-
-                            <path d="M29.5,14.3c-0.3-1-1.1-2.4-2.3-3.6c-1.1-1.1-2.5-1.9-3.4-2.1c-0.3-1.1-0.7-2.6-1-4c-0.5-2.1-1.1-4.1-2-4.5c-0.2-0.1-0.5-0.1-0.8,0c-0.6,0.2-1.1,0.9-1.4,1.8c-0.6,1.9-0.5,4.5,0.2,7.3c-0.4,1.1-0.9,2.4-1.4,3.7c-0.6,1.4-1.1,2.8-1.6,4.1c-1.3,0.7-2.9,1.6-4.3,2.4c-1.6,0.9-3.1,1.8-4.2,2.7c-0.9,0.8-1.5,1.6-1.7,2.4c-0.1,0.4,0,0.8,0.3,1.1c0.4,0.5,1.2,0.8,2.3,0.8c1.6,0,3.7-1,6-2.9c2.3-0.6,4.9-1.2,7.5-1.6c1.3,0.9,2.8,1.7,4.1,2.4c1.1,0.5,2,1,2.8,1.2c0.3,0.1,0.6,0.1,0.8,0c0.8-0.3,1.3-1.4,1.3-2.7C31,17.9,30.4,15.9,29.5,14.3z M19.4,3c0.3-0.4,0.6-0.7,0.7-0.7c0.1,0,0.2,0.2,0.3,0.7c0.2,0.7,0.6,2.2,1,3.8c-0.8,0.2-1.7,0.4-2.4,0.7C18.6,5.3,18.9,3.9,19.4,3z M6.4,28.8c-0.4,0-0.7-0.1-0.8-0.2c-0.1-0.1-0.1-0.2,0-0.4c0.1-0.4,0.5-0.9,1.1-1.5c0.9-0.8,2.1-1.6,3.5-2.3C9,26.4,7.5,28.1,6.4,28.8z M14.8,18.6c0.4-1.1,0.9-2.3,1.3-3.4c0.5-1.1,0.9-2.2,1.3-3.1c0.6,0,1.3-0.1,2-0.1c0.7,0,1.4,0,1.9,0.1C19.7,14,17.1,16.5,14.8,18.6z M28.7,20.4c0,0.5-0.2,0.9-0.4,1.1c-0.1,0.1-0.3,0.1-0.5,0c-0.5-0.2-1.1-0.6-1.9-1.1c-1.1-0.6-2.3-1.4-3.5-2.2c1.2-0.3,2.4-0.6,3.4-1C27.1,18.1,28.3,19.4,28.7,20.4z"/>
-
-                        </svg>
-
-                        <span data-en="Download Resume" data-es="Descargar CV">Download Resume</span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </header>
-
-
-
-        <div class="main-layout">
-
-            
-
-            <main id="main-content">
-
-                
-
-                <section aria-labelledby="summary-title">
-
-                    <h2 id="summary-title" data-en="Professional Summary" data-es="Resumen Profesional">Professional Summary</h2>
-
-                    <p style="color: var(--text-secondary); font-size: 1.05rem; font-weight: 500;"
-
-                       data-en="Innovative, forward-thinking Technology Specialist and Solutions Consultant with over 25 years of cross-functional excellence in enterprise technical engineering, systems optimization, and client enablement. Expert in bridging the gap between intricate hardware architectures and agile software solutions. A passion-driven tech evangelist with deep competencies in Full-Stack Web Development and Applied Artificial Intelligence. Recognized for an outside-the-box engineering mindset, specializing in developing custom software applications to streamline operational deficiencies, optimize high-stakes sales pipelines, and solve real-world logistical bottlenecks."
-
-                       data-es="Especialista tecnológico y consultor de soluciones innovador y vanguardista con más de 25 años de excelencia multifuncional en ingeniería técnica empresarial, optimización de sistemas y habilitación de clientes. Experto en cerrar la brecha entre arquitecturas de hardware complejas y soluciones de software ágiles. Evangelista tecnológico apasionado con profundas competencias en Desarrollo Web Full-Stack e Inteligencia Artificial Aplicada. Reconocido por una mentalidad de ingeniería fuera de lo común, especializado en desarrollar aplicaciones de software personalizadas para agilizar deficiencias operativas, optimizar canales de ventas de alto riesgo y resolver cuellos de botella logísticos del mundo real.">
-
-                        Innovative, forward-thinking Technology Specialist and Solutions Consultant with over 25 years of cross-functional excellence in enterprise technical engineering, systems optimization, and client enablement. Expert in bridging the gap between intricate hardware architectures and agile software solutions. A passion-driven tech evangelist with deep competencies in Full-Stack Web Development and Applied Artificial Intelligence. Recognized for an outside-the-box engineering mindset, specializing in developing custom software applications to streamline operational deficiencies, optimize high-stakes sales pipelines, and solve real-world logistical bottlenecks. 
-
-                    </p>
-
-                </section>
-
-
-
-                <section aria-labelledby="metrics-title">
-
-                    <h2 id="metrics-title" data-en="Key Accomplishments" data-es="Logros Clave">Key Accomplishments</h2>
-
-                    <div class="highlights-grid">
-
-                        <div class="stat-card">
-
-                            <strong data-en="$100,000+ Operational Savings" data-es="+$100,000 de Ahorro Operativo">$100,000+ Operational Savings</strong>
-
-                            <p data-en="Negotiated structural wireless service contract terms saving the organization over 100K over 3 years." data-es="Negoció los términos del contrato de servicios inalámbricos estructurales ahorrando a la organización más de 100K en 3 años.">Negotiated structural wireless service contract terms saving the organization over 100K over 3 years.</p>
-
-                        </div>
-
-                        <div class="stat-card">
-
-                            <strong data-en="$50,000/yr & 13 Days" data-es="$50,000/año y 13 Días">$50,000/yr & 13 Days</strong>
-
-                            <p data-en="Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs." data-es="Migró más de 400 dispositivos corporativos de Workspace One a Intune en tiempo récord, recortando los costos anuales de licencia.">Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs.</p>
-
-                        </div>
-
-                        <div class="stat-card">
-
-                            <strong data-en="President's Award Recipient" data-es="Ganador del Premio del Presidente">President's Award Recipient</strong>
-
-                            <p data-en="Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence." data-es="Galardonado con el Premio del Presidente de Canon Americas y múltiples Premios del Presidente de Canon Canada por la excelencia en la implementación.">Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence.</p>
-
-                        </div>
-
-                        <div class="stat-card">
-
-                            <strong data-en="200+ Hours Recovered" data-es="+200 Horas Recuperadas">200+ Hours Recovered</strong>
-
-                            <p data-en="Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows." data-es="Eliminó la latencia de configuración de dispositivos mediante la arquitectura de flujos de protocolos automatizados en Apple Business Manager.">Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows.</p>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-
-                <section aria-labelledby="portfolio-title">
-
-                    <h2 id="portfolio-title" data-en="AI Projects & Technical Innovation" data-es="Proyectos de IA e Innovación Técnica">AI Projects & Technical Innovation</h2>
-
-
-
-                    <article class="job-card" style="border-top: 3px solid #10b981;">
-
-                        <div class="job-header">
-
-                            <div>
-
-                                <span class="job-title" data-en="Enterprise Sales & Logistics Opportunity CRM" data-es="CRM de Oportunidades de Logística y Ventas Empresariales">Enterprise Sales & Logistics Opportunity CRM</span><br>
-
-                                <span class="job-company" data-en="Independent Software Architecture Initiative" data-es="Iniciativa Independiente de Arquitectura de Software">Independent Software Architecture Initiative</span>
-
-                            </div>
-
-                            <span class="job-date" data-en="Continuous Innovation" data-es="Innovación Continua">Continuous Innovation</span>
-
-                        </div>
-
-                        <ul class="job-bullets">
-
-                            <li data-en="<strong>UI/UX Variable Architecture:</strong> Built a production-ready, clean front-end application leveraging modularized native CSS variables, flexbox structures, and dynamic grid layouts to manage localized account data pipelines."
-
-                                data-es="<strong>Arquitectura de Variables UI/UX:</strong> Construyó una aplicación front-end limpia y lista para producción aprovechando variables CSS nativas modularizadas, estructuras flexbox y diseños de cuadrícula dinámicos para gestionar flujos de datos de cuentas localizadas."></li>
-
-                            <li data-en="<strong>Asynchronous State Management:</strong> Designed functional state preservation bindings to automatically sync local storage states and refresh dashboard layouts dynamically upon tracking events."
-
-                                data-es="<strong>Gestión de Estado Asíncrona:</strong> Diseñó enlaces funcionales de preservación de estado para sincronizar automáticamente los estados de almacenamiento local y actualizar los diseños del panel dinámicamente según los eventos de seguimiento."></li>
-
-                            <li data-en="<strong>Dynamic Animations:</strong> Integrated real-time interaction feedback loops utilizing CSS3 <code>@keyframes</code> pulse triggers to flag aging accounts and lifecycle constraints."
-
-                                data-es="<strong>Animaciones Dinámicas:</strong> Integró bucles de retroalimentación de interacción en tiempo real utilizando activadores de pulso <code>@keyframes</code> de CSS3 para marcar cuentas antiguas y restricciones de ciclo de vida."></li>
-
-                            <li data-en="<strong>Data Handling & Fallbacks:</strong> Developed structured JSON file-system importers and string execution pipelines using vanilla HTML5 FileReader APIs to safeguard cross-system data updates without external server overhead."
-
-                                data-es="<strong>Manipulación de Datos y Alternativas:</strong> Desarrolló importadores de sistemas de archivos JSON estructurados y canalizaciones de ejecución de cadenas utilizando APIs FileReader de HTML5 nativo para salvaguardar las actualizaciones de datos e 
-
-HTML God
-Custom Gem
-Thank you for providing the full code for your resume site. I have it clearly mapped now.
-
-To help you get the bilingual functionality running correctly, we need to add a small JavaScript handler. Since your resume uses data-en and data-es attributes for your text elements, this script will dynamically swap the text content and update the "active" states of your buttons when the language is switched.
-
-Here is the JavaScript to place just before your closing </body> tag:
-
-HTML
-<script>
-    function setGlobalAppLanguage(lang) {
-        // Update active class on buttons
-        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-        document.getElementById(`btn-lang-${lang}`).classList.add('active');
-
-        // Translate all elements with data-en/data-es attributes
-        document.querySelectorAll('[data-en][data-es]').forEach(el => {
-            if (lang === 'en') {
-                el.innerText = el.getAttribute('data-en');
-            } else {
-                el.innerText = el.getAttribute('data-es');
-            }
-        });
-
-        // Handle specific title/placeholder attributes (like the download button)
-        document.querySelectorAll('[data-en-title][data-es-title]').forEach(el => {
-            el.setAttribute('title', el.getAttribute(`data-${lang}-title`));
-        });
-    }
-</script>
-A few quick tips to ensure this works perfectly:
-Placement: Place the script block above, right before the </body> tag in your HTML file.
-
-Consistency: Ensure every text element you want translated has both the data-en and data-es attributes. I noticed your "Download Resume" span in the button already has these, so it will work perfectly with the script above.
-
-Refining the Input: The script above uses innerText. If you have HTML tags inside your translated text (like the <strong> tags in your job bullets), change el.innerText to el.innerHTML in the script to ensure the formatting stays bold.
-
-Would you like me to help you integrate the language-switching state into your browser's local storage so it remembers the user's preference if they refresh the page?
-
-ok now that you have my code and you know what I'm asking can you please provdie me the full code including putting back the languages and flags next to my e-mail address on my resume
-
-HTML God
-Custom Gem
-To integrate the language switcher and the bilingual status directly into your header near your contact information, I have modified your header section. I have also included the necessary JavaScript to handle the language swapping logic (including support for innerHTML to preserve your bold tags).
-
-Here is the updated full code for your resume:
-
-HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Orellana | Technical Solutions Consultant & Full-Stack Innovator</title>
-    <meta name="description" content="Professional web portfolio of Manuel Orellana, an award-winning Technical Solutions Consultant with 25 years of expertise in enterprise workflows, document systems, and full-stack web applications.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://alx886.github.io/myresume/">
-
-    <style>
-        :root {
-            --text-primary: #0f172a;      
-            --text-secondary: #334155;    
-            --accent-corporate: #1d4ed8; 
-            --accent-pdf: #ee3124;       
-            --border-slate: #cbd5e1;     
-            --tag-bg: #e2e8f0;           
-            --card-bg: rgba(241, 245, 249, 0.8); 
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { color: var(--text-primary); font-family: var(--font-stack); line-height: 1.6; background-color: #e2e8f0; padding: 0; min-height: 100vh; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
-        
-        /* Header & Contact Area */
-        header { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; align-items: start; padding-bottom: 3rem; border-bottom: 1px solid var(--border-slate); margin-bottom: 3rem; }
-        .profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border-slate); }
-        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.25rem; }
-        h1 span { color: var(--accent-corporate); font-weight: 400; }
-        .tagline { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 1.25rem; font-weight: 600; }
-
-        .contact-layout-wrapper { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-        .contact-info { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); }
-        .contact-info a { color: var(--text-primary); font-weight: 700; text-decoration: none; }
-
-        /* Language Switcher Styling */
-        .lang-switch-container { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.5rem; }
-        .lang-btn { background: none; border: 1px solid var(--border-slate); cursor: pointer; display: flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; transition: all 0.2s; }
-        .lang-btn.active { background-color: var(--text-primary); color: #fff; border-color: var(--text-primary); }
-        .flag-icon { width: 16px; height: 12px; object-fit: cover; }
-        
-        .pdf-download-btn { background-color: var(--accent-pdf); color: #fff; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.85rem; }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <img src="https://i.ibb.co/hxCX8r30/Profile-Picture-2.png" alt="Manuel Orellana" class="profile-img">
-            <div class="header-text">
-                <h1>MANUEL <span>ORELLANA</span></h1>
-                <div class="tagline" data-en="Technical Solutions Consultant & Full-Stack Systems Innovator" data-es="Consultor de Soluciones Técnicas e Innovador Full-Stack">
-                    Technical Solutions Consultant & Full-Stack Systems Innovator
-                </div>
-
                 <div class="contact-layout-wrapper">
                     <div class="contact-info">
                         <span>📍 Toronto, ON</span>
@@ -1683,40 +667,395 @@ HTML
                         <span>✉️ <a href="mailto:alx886@gmail.com">alx886@gmail.com</a></span>
                         
                         <div class="lang-switch-container">
-                            <button class="lang-btn active" id="btn-lang-en" onclick="setGlobalAppLanguage('en')">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" class="flag-icon"> EN
+                            <button class="lang-btn active" id="btn-lang-en" onclick="setGlobalAppLanguage('en')" aria-label="Switch page to English">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="" class="flag-icon"> EN
                             </button>
-                            <button class="lang-btn" id="btn-lang-es" onclick="setGlobalAppLanguage('es')">
-                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" class="flag-icon"> ES
+                            <button class="lang-btn" id="btn-lang-es" onclick="setGlobalAppLanguage('es')" aria-label="Cambiar página a Español">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" alt="" class="flag-icon"> ES
                             </button>
                         </div>
                     </div>
                     
-                    <a href="#" class="pdf-download-btn" data-en="Download Resume" data-es="Descargar CV">Download Resume</a>
+                    <a href="https://alx886.github.io/myresume/Manuel%20Orellana%20Resume%202026.pdf" 
+                       download="Manuel_Orellana_Resume_2026.pdf" 
+                       class="pdf-download-btn" 
+                       data-en-title="Download Official Resume PDF"
+                       data-es-title="Descargar Currículum Oficial en PDF">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 16px; height: 16px; fill: currentColor; vertical-align: middle;">
+                            <path d="M29.5,14.3c-0.3-1-1.1-2.4-2.3-3.6c-1.1-1.1-2.5-1.9-3.4-2.1c-0.3-1.1-0.7-2.6-1-4c-0.5-2.1-1.1-4.1-2-4.5c-0.2-0.1-0.5-0.1-0.8,0c-0.6,0.2-1.1,0.9-1.4,1.8c-0.6,1.9-0.5,4.5,0.2,7.3c-0.4,1.1-0.9,2.4-1.4,3.7c-0.6,1.4-1.1,2.8-1.6,4.1c-1.3,0.7-2.9,1.6-4.3,2.4c-1.6,0.9-3.1,1.8-4.2,2.7c-0.9,0.8-1.5,1.6-1.7,2.4c-0.1,0.4,0,0.8,0.3,1.1c0.4,0.5,1.2,0.8,2.3,0.8c1.6,0,3.7-1,6-2.9c2.3-0.6,4.9-1.2,7.5-1.6c1.3,0.9,2.8,1.7,4.1,2.4c1.1,0.5,2,1,2.8,1.2c0.3,0.1,0.6,0.1,0.8,0c0.8-0.3,1.3-1.4,1.3-2.7C31,17.9,30.4,15.9,29.5,14.3z M19.4,3c0.3-0.4,0.6-0.7,0.7-0.7c0.1,0,0.2,0.2,0.3,0.7c0.2,0.7,0.6,2.2,1,3.8c-0.8,0.2-1.7,0.4-2.4,0.7C18.6,5.3,18.9,3.9,19.4,3z M6.4,28.8c-0.4,0-0.7-0.1-0.8-0.2c-0.1-0.1-0.1-0.2,0-0.4c0.1-0.4,0.5-0.9,1.1-1.5c0.9-0.8,2.1-1.6,3.5-2.3C9,26.4,7.5,28.1,6.4,28.8z M14.8,18.6c0.4-1.1,0.9-2.3,1.3-3.4c0.5-1.1,0.9-2.2,1.3-3.1c0.6,0,1.3-0.1,2-0.1c0.7,0,1.4,0,1.9,0.1C19.7,14,17.1,16.5,14.8,18.6z M28.7,20.4c0,0.5-0.2,0.9-0.4,1.1c-0.1,0.1-0.3,0.1-0.5,0c-0.5-0.2-1.1-0.6-1.9-1.1c-1.1-0.6-2.3-1.4-3.5-2.2c1.2-0.3,2.4-0.6,3.4-1C27.1,18.1,28.3,19.4,28.7,20.4z"/>
+                        </svg>
+                        <span data-en="Download Resume" data-es="Descargar CV">Download Resume</span>
+                    </a>
                 </div>
             </div>
         </header>
 
-        <main id="main-content">
-            <section>
-                <h2 data-en="Professional Summary" data-es="Resumen Profesional">Professional Summary</h2>
-                <p data-en="Innovative Technology Specialist with 25 years of experience..." data-es="Especialista tecnológico innovador con 25 años de experiencia...">
-                    Innovative Technology Specialist with 25 years of experience...
-                </p>
-            </section>
-        </main>
+        <div class="main-layout">
+            
+            <main id="main-content">
+                
+                <section aria-labelledby="summary-title">
+                    <h2 id="summary-title" data-en="Professional Summary" data-es="Resumen Profesional">Professional Summary</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; font-weight: 500;"
+                       data-en="Innovative, forward-thinking Technology Specialist and Solutions Consultant with over 25 years of cross-functional excellence in enterprise technical engineering, systems optimization, and client enablement. Expert in bridging the gap between intricate hardware architectures and agile software solutions. A passion-driven tech evangelist with deep competencies in Full-Stack Web Development and Applied Artificial Intelligence. Recognized for an outside-the-box engineering mindset, specializing in developing custom software applications to streamline operational deficiencies, optimize high-stakes sales pipelines, and solve real-world logistical bottlenecks."
+                       data-es="Especialista tecnológico y consultor de soluciones innovador y vanguardista con más de 25 años de excelencia multifuncional en ingeniería técnica empresarial, optimización de sistemas y habilitación de clientes. Experto en cerrar la brecha entre arquitecturas de hardware complejas y soluciones de software ágiles. Evangelista tecnológico apasionado con profundas competencias en Desarrollo Web Full-Stack e Inteligencia Artificial Aplicada. Reconocido por una mentalidad de ingeniería fuera de lo común, especializado en desarrollar aplicaciones de software personalizadas para agilizar deficiencias operativas, optimizar canales de ventas de alto riesgo y resolver cuellos de botella logísticos del mundo real.">
+                        Innovative, forward-thinking Technology Specialist and Solutions Consultant with over 25 years of cross-functional excellence in enterprise technical engineering, systems optimization, and client enablement. Expert in bridging the gap between intricate hardware architectures and agile software solutions. A passion-driven tech evangelist with deep competencies in Full-Stack Web Development and Applied Artificial Intelligence. Recognized for an outside-the-box engineering mindset, specializing in developing custom software applications to streamline operational deficiencies, optimize high-stakes sales pipelines, and solve real-world logistical bottlenecks. 
+                    </p>
+                </section>
+
+                <section aria-labelledby="metrics-title">
+                    <h2 id="metrics-title" data-en="Key Accomplishments" data-es="Logros Clave">Key Accomplishments</h2>
+                    <div class="highlights-grid">
+                        <div class="stat-card">
+                            <strong data-en="$100,000+ Operational Savings" data-es="+$100,000 de Ahorro Operativo">$100,000+ Operational Savings</strong>
+                            <p data-en="Negotiated structural wireless service contract terms saving the organization over 100K over 3 years." data-es="Negoció los términos del contrato de servicios inalámbricos estructurales ahorrando a la organización más de 100K en 3 años.">Negotiated structural wireless service contract terms saving the organization over 100K over 3 years.</p>
+                        </div>
+                        <div class="stat-card">
+                            <strong data-en="$50,000/yr & 13 Days" data-es="$50,000/año y 13 Días">$50,000/yr & 13 Days</strong>
+                            <p data-en="Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs." data-es="Migró más de 400 dispositivos corporativos de Workspace One a Intune en tiempo récord, recortando los costos anuales de licencia.">Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs.</p>
+                        </div>
+                        <div class="stat-card">
+                            <strong data-en="President's Award Recipient" data-es="Ganador del Premio del Presidente">President's Award Recipient</strong>
+                            <p data-en="Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence." data-es="Galardonado con el Premio del Presidente de Canon Americas y múltiples Premios del Presidente de Canon Canada por la excelencia en la implementación.">Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence.</p>
+                        </div>
+                        <div class="stat-card">
+                            <strong data-en="200+ Hours Recovered" data-es="+200 Horas Recuperadas">200+ Hours Recovered</strong>
+                            <p data-en="Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows." data-es="Eliminó la latencia de configuración de dispositivos mediante la arquitectura de flujos de protocolos automatizados en Apple Business Manager.">Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="portfolio-title">
+                    <h2 id="portfolio-title" data-en="AI Projects & Technical Innovation" data-es="Proyectos de IA e Innovación Técnica">AI Projects & Technical Innovation</h2>
+
+                    <article class="job-card" style="border-top: 3px solid #10b981;">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title" data-en="Enterprise Sales & Logistics Opportunity CRM" data-es="CRM de Oportunidades de Logística y Ventas Empresariales">Enterprise Sales & Logistics Opportunity CRM</span><br>
+                                <span class="job-company" data-en="Independent Software Architecture Initiative" data-es="Iniciativa Independiente de Arquitectura de Software">Independent Software Architecture Initiative</span>
+                            </div>
+                            <span class="job-date" data-en="Continuous Innovation" data-es="Innovación Continua">Continuous Innovation</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li data-en="<strong>UI/UX Variable Architecture:</strong> Built a production-ready, clean front-end application leveraging modularized native CSS variables, flexbox structures, and dynamic grid layouts to manage localized account data pipelines."
+                                data-es="<strong>Arquitectura de Variables UI/UX:</strong> Construyó una aplicación front-end limpia y lista para producción aprovechando variables CSS nativas modularizadas, estructuras flexbox y diseños de cuadrícula dinámicos para gestionar flujos de datos de cuentas localizadas."></li>
+                            <li data-en="<strong>Asynchronous State Management:</strong> Designed functional state preservation bindings to automatically sync local storage states and refresh dashboard layouts dynamically upon tracking events."
+                                data-es="<strong>Gestión de Estado Asíncrona:</strong> Diseñó enlaces funcionales de preservación de estado para sincronizar automáticamente los estados de almacenamiento local y actualizar los diseños del panel dinámicamente según los eventos de seguimiento."></li>
+                            <li data-en="<strong>Dynamic Animations:</strong> Integrated real-time interaction feedback loops utilizing CSS3 <code>@keyframes</code> pulse triggers to flag aging accounts and lifecycle constraints."
+                                data-es="<strong>Animaciones Dinámicas:</strong> Integró bucles de retroalimentación de interacción en tiempo real utilizando activadores de pulso <code>@keyframes</code> de CSS3 para marcar cuentas antiguas y restricciones de ciclo de vida."></li>
+                            <li data-en="<strong>Data Handling & Fallbacks:</strong> Developed structured JSON file-system importers and string execution pipelines using vanilla HTML5 FileReader APIs to safeguard cross-system data updates without external server overhead."
+                                data-es="<strong>Manipulación de Datos y Alternativas:</strong> Desarrolló importadores de sistemas de archivos JSON estructurados y canalizaciones de ejecución de cadenas utilizando APIs FileReader de HTML5 nativo para salvaguardar las actualizaciones de datos entre sistemas sin sobrecarga de servidores externos."></li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card" style="border-top: 3px solid #3b82f6;">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title" data-en="Applied AI & Automated Workflow Engineering" data-es="IA Aplicada e Ingeniería de Flujos de Trabajo Automatizados">Applied AI & Automated Workflow Engineering</span><br>
+                                <span class="job-company" data-en="Self-Directed Systems Integration Portfolio" data-es="Portafolio de Integración de Sistemas Autodirigido">Self-Directed Systems Integration Portfolio</span>
+                            </div>
+                            <span class="job-date" data-en="Continuous Innovation" data-es="Innovación Continua">Continuous Innovation</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li data-en="<strong>Prompt Engineering & Logic Automation:</strong> Investigate and build localized automation scripts combining Large Language Model capabilities with operational flows to parse data structures, optimize manual categorization, and eliminate administrative latency."
+                                data-es="<strong>Ingeniería de Prompts y Automatización de Lógica:</strong> Investiga y construye scripts de automatización localizados que combinan capacidades de Modelos de Lenguaje Grande con flujos operativos para analizar estructuras de datos, optimizar la categorización manual y eliminar la latencia administrativa."></li>
+                            <li data-en="<strong>Outside-the-Box Solutions:</strong> Combine modern front-end web paradigms with custom algorithmic automation models to create performant, cost-free technical alternatives that solve real-world industry friction points."
+                                data-es="<strong>Soluciones Fuera de lo Común:</strong> Combina paradigmas web front-end modernos con modelos de automatización algorítmica personalizados para crear alternativas técnicas eficientes y sin costo que resuelven puntos de fricción reales de la industria."></li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section aria-labelledby="experience-title">
+                    <h2 id="experience-title" data-en="Work History" data-es="Historial Laboral">Work History</h2>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title" data-en="Technical Solutions Consultant (Sales Enablement)" data-es="Consultor de Soluciones Técnicas (Habilitación de Ventas)">Technical Solutions Consultant (Sales Enablement)</span><br>
+                                <span class="job-company">Canon Canada Inc., Brampton, ON</span>
+                            </div>
+                            <span class="job-date" data-en="03/2023 to Current" data-es="03/2023 al Presente">03/2023 to Current</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li data-en="<strong>Subject Matter Expert (SME):</strong> Serve as the principal technical authority, structural integration engineer, and platform advisor across high-value business scanner lines and enterprise business/small office printers. Dedicated hours to self-training on deep technical specifications to master unique competitive advantages."
+                                data-es="<strong>Experto en la Materia (SME):</strong> Sirve como la principal autoridad técnica, ingeniero de integración estructural y asesor de plataformas en líneas de escáneres comerciales de alto valor e impresoras para empresas y pequeñas oficinas. Dedicó horas a la autoformación en especificaciones técnicas profundas para dominar ventajas competitivas únicas."></li>
+                            <li data-en="<strong>Sales Acceleration & Enablement:</strong> Partner closely with dealer channel networks and Sales Enablement units to audit prospective client environments, analyze complex document workflows, and propose tailored technology configurations that remove runtime latency and drive strategic asset sales."
+                                data-es="<strong>Aceleración y Habilitación de Ventas:</strong> Colabora estrechamente con las redes de canales de distribución y las unidades de Habilitación de Ventas para auditar los entornos de clientes potenciales, analizar flujos de trabajo de documentos complejos y proponer configuraciones tecnológicas a la medida que eliminen la latencia de ejecución y potencien las ventas de activos estratégicos."></li>
+                            <li data-en="<strong>Advanced Technical Operations & Diagnostics:</strong> Deliver rapid-response tier-3 engineering and diagnostic troubleshooting directly to clients facing critical integration friction, application compatibility hurdles, or installed hardware configuration issues."
+                                data-es="<strong>Operaciones Técnicas Avanzadas y Diagnósticos:</strong> Ofrece ingeniería de nivel 3 de respuesta rápida y resolución de problemas de diagnóstico directamente a los clientes que enfrentan fricciones críticas de integración, obstáculos de compatibilidad de aplicaciones o problemas de configuración de hardware instalado."></li>
+                            <li data-en="<strong>Value Demonstration & Pipeline Conversion:</strong> Successfully gain client trust, secure technology acceptance, and accelerate pipeline closure by building clear financial models that demonstrate measurable cost reductions and concrete operational improvements."
+                                data-es="<strong>Demostración de Valor y Conversión de Prospectos:</strong> Gana con éxito la confianza del cliente, asegura la aceptación de la tecnología y acelera el cierre de oportunidades comerciales mediante la creación de modelos financieros claros que demuestran reducciones de costos medibles y mejoras operativas concretas."></li>
+                            <li data-en="<strong>Global Feedback Loop:</strong> Consolidate field telemetry data, user observations, and real-world software/hardware interaction roadblocks to deliver structured engineering enhancements directly to global product development teams."
+                                data-es="<strong>Bucle de Retroalimentación Global:</strong> Consolida los datos de telemetría de campo, las observaciones de los usuarios y los obstáculos de interacción del mundo real entre software y hardware para entregar mejoras de ingeniería estructuradas directamente a los equipos globales de desarrollo de productos."></li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title" data-en="Client Technology Specialist" data-es="Especialista en Tecnología del Cliente">Client Technology Specialist</span><br>
+                                <span class="job-company">Canon Canada Inc.</span>
+                            </div>
+                            <span class="job-date" data-en="08/2009 to 02/2023" data-es="08/2009 al 02/2023">08/2009 to 02/2023</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li data-en="<strong>Executive Tier Technical Support:</strong> Commanded dedicated technical hardware and software operations across the corporate layout, delivering immediate, zero-downtime solutions to C-suite executives and enterprise leadership."
+                                data-es="<strong>Soporte Técnico de Nivel Ejecutivo:</strong> Dirigió operaciones técnicas dedicadas de hardware y software en todo el entorno corporativo, brindando soluciones inmediatas y sin tiempo de inactividad a ejecutivos de la alta dirección y líderes empresariales."></li>
+                            <li data-en="<strong>Enterprise Mobility Management (EMM):</strong> Acted as the core platform owner for secure configuration, global provisioning, and continuous deployment of over 400 enterprise assets leveraging Microsoft Intune and VMware Workspace One. Implemented app-based compliance policies that dramatically lowered corporate data expenses."
+                                data-es="<strong>Gestión de Movilidad Empresarial (EMM):</strong> Actuó como propietario de la plataforma central para la configuración segura, el aprovisionamiento global y la implementación continua de más de 400 activos empresariales aprovechando Microsoft Intune y VMware Workspace One. Implementó políticas de cumplimiento basadas en aplicaciones que redujeron drásticamente los gastos de datos corporativos."></li>
+                            <li data-en="<strong>Multisite Infrastructure Operations:</strong> Commanded infrastructure lifecycle support and continuous operational availability across 3 critical national distribution warehouses, keeping PC hardware, operating standards, and mobile terminal scanners online."
+                                data-es="<strong>Operaciones de Infraestructura Multisitio:</strong> Dirigió el soporte del ciclo de vida de la infraestructura y la disponibilidad operativa continua en 3 almacenes de distribución nacional críticos, manteniendo en línea el hardware de PC, los estándares operativos y los escáneres de terminales móviles."></li>
+                            <li data-en="<strong>Knowledge Management Architecture:</strong> Researched, authored, and maintained a centralized technical knowledgebase base used internally by enterprise IT and externally by third-party support networks in the United States."
+                                data-es="<strong>Arquitectura de Gestión del Conocimiento:</strong> Investigó, redactó y mantuvo una base de conocimientos técnica centralizada utilizada internamente por el departamento de TI de la empresa y externamente por redes de soporte de terceros en los Estados Unidos."></li>
+                            <li data-en="<strong>Resource Optimization:</strong> Deployed creative hardware modifications and technical configuration adjustments to address recurring environment alerts, driving cost reductions without dropping performance metrics. Managed end-user expectations via the HP Project Portfolio Management Center (PPM) ticketing architecture."
+                                data-es="<strong>Optimización de Recursos:</strong> Desplegó modificaciones creativas de hardware y ajustes de configuración técnica para abordar alertas recurrentes del entorno, impulsando la reducción de costos sin disminuir las métricas de rendimiento. Gestionó las expectativas de los usuarios finales a través de la arquitectura de tickets de HP Project Portfolio Management Center (PPM)."></li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title" data-en="Training & Knowledge Management Specialist" data-es="Especialista en Capacitación y Gestión del Conocimiento">Training & Knowledge Management Specialist</span><br>
+                                <span class="job-company">Siemens Business Services</span>
+                            </div>
+                            <span class="job-date" data-en="09/2005 to 06/2009" data-es="09/2005 al 06/2009">09/2005 to 06/2009</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li data-en="<strong>Onboarding Curriculums:</strong> Designed, iterated, and adapted agile training frameworks to rapidly transform fresh talent into high-performing professionals in high-velocity service desk environments."
+                                data-es="<strong>Planes de Estudio de Integración:</strong> Diseñó, reiteró y adaptó marcos de capacitación ágiles para transformar rápidamente el nuevo talento en profesionales de alto rendimiento en entornos de mesa de servicio de alta velocidad."></li>
+                            <li data-en="<strong>International Operations Prototyping:</strong> Chosen to head corporate operations scaling into the Philippines, directing on-site training pipelines for 50 international technical staff on core account processes and platform environments."
+                                data-es="<strong>Prototipado de Operaciones Internacionales:</strong> Elegido para dirigir la expansión de operaciones corporativas en Filipinas, coordinando flujos de capacitación en el sitio para 50 colaboradores técnicos internacionales sobre los procesos centrales de las cuentas y los entornos de la plataforma."></li>
+                            <li data-en="<strong>Technical Content Engineering:</strong> Engineered comprehensive training documentation, operational playbooks, and systems layouts covering Active Directory user management, complex secure VPN tunnels, and enterprise communication suites."
+                                data-es="<strong>Ingeniería de Contenido Técnico:</strong> Diseñó documentación de capacitación integral, manuales operativos y diagramas de sistemas que abarcaban la gestión de usuarios de Active Directory, túneles VPN seguros complejos y suites de comunicación empresarial."></li>
+                        </ul>
+                    </article>
+                </ul class="job-bullets">
+                </section>
+
+            </main>
+
+            <aside aria-label="Expertise Matrix and Credentials">
+                
+                <section aria-labelledby="skills-title">
+                    <h2 id="skills-title" data-en="Expertise" data-es="Conocimientos">Expertise</h2>
+                    
+                    <div class="skills-group">
+                        <h3 data-en="Hardware Expert Portfolios" data-es="Portafolio de Hardware Experto">Hardware Expert Portfolios</h3>
+                        <div class="skills-tags">
+                            <span class="tag" style="background-color: #cbd5e1; color: #1e3a8a; font-weight: 700;" data-en="Business Scanners" data-es="Escáneres Comerciales">Business Scanners</span>
+                            <span class="tag" style="background-color: #cbd5e1; color: #1e3a8a; font-weight: 700;" data-en="Business Printers" data-es="Impresoras Comerciales">Business Printers</span>
+                            <span class="tag" data-en="Mobile Scanner Terminals" data-es="Terminales de Escáner Móvil">Mobile Scanner Terminals</span>
+                            <span class="tag" data-en="PC Hardware Maintenance" data-es="Mantenimiento de Hardware de PC">PC Hardware Maintenance</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 data-en="Full-Stack Web Stack" data-es="Tecnologías Web Full-Stack">Full-Stack Web Stack</h3>
+                        <div class="skills-tags">
+                            <span class="tag">HTML5 / DOM API</span>
+                            <span class="tag">CSS3 / Responsive Grid</span>
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">JSON / Data Mapping</span>
+                            <span class="tag">State Management</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 data-en="Enterprise Mobility & Security" data-es="Movilidad y Seguridad Empresarial">Enterprise Mobility & Security</h3>
+                        <div class="skills-tags">
+                            <span class="tag">Microsoft Intune</span>
+                            <span class="tag">Workspace One</span>
+                            <span class="tag">Apple Business Manager</span>
+                            <span class="tag">Azure AD / Entra ID</span>
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">iOS / Android / Mac OS</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="certs-title">
+                    <h2 id="certs-title" data-en="Certifications" data-es="Certificaciones">Certifications</h2>
+                    <div class="job-card" style="margin-bottom: 0; padding: 1.25rem;">
+                        <strong style="color: var(--text-primary); font-size: 1rem;">ITIL Foundations 4</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.15rem; font-weight: 600;" data-en="Issued Sept 2020" data-es="Emitido en Sept 2020">Issued Sept 2020</p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="edu-title" style="margin-top: 3rem;">
+                    <h2 id="edu-title" data-en="Education" data-es="Educación">Education</h2>
+                    <div style="font-size: 0.95rem; margin-bottom: 1.25rem;">
+                        <strong style="color: var(--text-primary);" data-en="Network Engineering Studies" data-es="Estudios de Ingeniería de Redes">Network Engineering Studies</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Xintra Computer College, Mississauga, ON</span>
+                    </div>
+                    <div style="font-size: 0.95rem;">
+                        <strong style="color: var(--text-primary);" data-en="High School Diploma" data-es="Diploma de Escuela Secundaria">High School Diploma</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Michael Power St. Joseph HS, Toronto, ON</span>
+                    </div>
+                </section>
+
+                <section aria-labelledby="social-title" style="margin-top: 3rem;">
+                    <h2 id="social-title" data-en="Networks" data-es="Redes">Networks</h2>
+                    <a href="https://www.linkedin.com/in/manuel-orellana-41538012/" target="_blank" rel="noopener noreferrer" class="linkedin-badge-btn">
+                        <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        <span data-en="Connect on LinkedIn" data-es="Conectar en LinkedIn">Connect on LinkedIn</span>
+                    </a>
+
+                    <div class="carousel-wrapper" data-en-title="Click card to verify recommendations on LinkedIn" data-es-title="Haga clic para verificar las recomendaciones en LinkedIn">
+                        <div class="carousel-track">
+                            
+                            <a href="https://www.linkedin.com/in/manuel-orellana-41538012/" target="_blank" rel="noopener noreferrer" class="carousel-item active">
+                                <p class="recommendation-text" 
+                                   data-en='"Manuel possesses an exceptional ability to unravel intricate technological problems and explain them seamlessly. His leadership on enterprise device migrations saved us hundreds of testing hours."'
+                                   data-es='"Manuel posee una capacidad excepcional para resolver problemas tecnológicos complejos y explicarlos con total fluidez. Su liderazgo en las migraciones de dispositivos empresariales nos ahorró cientos de horas de pruebas."'>
+                                   "Manuel possesses an exceptional ability to unravel intricate technological problems and explain them seamlessly. His leadership on enterprise device migrations saved us hundreds of testing hours."
+                                </p>
+                                <span class="recommendation-author" data-en="Senior Infrastructure Manager" data-es="Gerente Senior de Infraestructura">Senior Infrastructure Manager</span>
+                                <span class="recommendation-title" data-en="Corporate Logistics Matrix" data-es="Matriz de Logística Corporativa">Corporate Logistics Matrix</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/manuel-orellana-41538012/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                                <p class="recommendation-text"
+                                   data-en='"An outside-the-box thinker who builds custom tools to solve everyday work friction. Manuel&#039;s dedication to hardware solutions integration makes him an authority in his space."'
+                                   data-es='"Un pensador creativo fuera de lo común que desarrolla herramientas personalizadas para resolver las fricciones laborales diarias. La dedicación de Manuel a la integración de soluciones de hardware lo convierte en una autoridad en su área."'>
+                                   "An outside-the-box thinker who builds custom tools to solve everyday work friction. Manuel's dedication to hardware solutions integration makes him an authority in his space."
+                                </p>
+                                <span class="recommendation-author" data-en="Enterprise Sales Lead" data-es="Líder de Ventas Empresariales">Enterprise Sales Lead</span>
+                                <span class="recommendation-title" data-en="Dealer Channels Sector" data-es="Sector de Canales de Distribución">Dealer Channels Sector</span>
+                            </a>
+
+                        </div>
+
+                        <div class="carousel-controls">
+                            <button type="button" class="carousel-btn" onclick="shiftCarouselSlide(-1)"><span data-en="◂ Prev" data-es="◂ Ant">◂ Prev</span></button>
+                            <div class="carousel-indicators" id="carousel-dots-tray">
+                                <div class="indicator-dot active"></div>
+                                <div class="indicator-dot"></div>
+                            </div>
+                            <button type="button" class="carousel-btn" onclick="shiftCarouselSlide(1)"><span data-en="Next ▸" data-es="Sig ▸">Next ▸</span></button>
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="contact-form-title" style="margin-top: 3rem;">
+                    <h2 id="contact-form-title" data-en="Contact Me" data-es="Contáctame">Contact Me</h2>
+                    <form id="portfolio-contact-form" onsubmit="handleFormSubmission(event)" style="background: var(--card-bg); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-slate); box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);">
+                        
+                        <div class="form-group">
+                            <label for="contact-name" data-en="Full Name *" data-es="Nombre Completo *">Full Name *</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-company" data-en="Company Name" data-es="Nombre de la Empresa">Company Name</label>
+                            <input type="text" id="contact-company" class="form-control" placeholder="Enterprise Inc.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-comments" data-en="Comments / Inquiries *" data-es="Comentarios / Preguntas *">Comments / Inquiries *</label>
+                            <textarea id="contact-comments" class="form-control" placeholder="Let's discuss an upcoming integration opportunity..." required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-clear" onclick="clearFormInputs()" data-en="Clear" data-es="Limpiar">Clear</button>
+                            <button type="submit" class="btn btn-submit" data-en="Submit" data-es="Enviar">Submit</button>
+                        </div>
+                    </form>
+                </section>
+
+            </aside>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Manuel Orellana</p>
+        </footer>
+
     </div>
 
     <script>
-        function setGlobalAppLanguage(lang) {
-            // Update button states
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(`btn-lang-${lang}`).classList.add('active');
-
-            // Translate all elements with data attributes
-            document.querySelectorAll('[data-en][data-es]').forEach(el => {
-                el.innerHTML = el.getAttribute(`data-${lang}`);
+        /* Localization Processing Script Engine */
+        function setGlobalAppLanguage(targetLanguage) {
+            // Persist preference to browser cache
+            localStorage.setItem('preferredPortfolioLang', targetLanguage);
+            
+            // Toggle active styling states on buttons
+            document.getElementById('btn-lang-en').classList.toggle('active', targetLanguage === 'en');
+            document.getElementById('btn-lang-es').classList.toggle('active', targetLanguage === 'es');
+            
+            // Query all localizable nodes containing text arrays
+            const localizableElements = document.querySelectorAll('[data-en], [data-es]');
+            
+            localizableElements.forEach(element => {
+                const targetTextContent = element.getAttribute(`data-${targetLanguage}`);
+                if (targetTextContent !== null && targetTextContent !== '') {
+                    element.innerHTML = targetTextContent;
+                }
             });
+
+            // Query components containing complex layout title attributes 
+            const interactiveTitleElements = document.querySelectorAll('[data-en-title], [data-es-title]');
+            interactiveTitleElements.forEach(element => {
+                const targetTitleContent = element.getAttribute(`data-${targetLanguage}-title`);
+                if (targetTitleContent) {
+                    element.setAttribute('title', targetTitleContent);
+                }
+            });
+        }
+
+        // Initialize translation configuration upon UI load execution
+        document.addEventListener('DOMContentLoaded', () => {
+            const cachedLanguageSelection = localStorage.getItem('preferredPortfolioLang') || 'en';
+            setGlobalAppLanguage(cachedLanguageSelection);
+        });
+
+        /* Carousel Component State Controller */
+        let activeCarouselIndex = 0;
+        const carouselSlides = document.querySelectorAll('.carousel-item');
+        const indicatorDots = document.querySelectorAll('.indicator-dot');
+        let autoScrollTimerInstance = setInterval(() => shiftCarouselSlide(1), 5000);
+
+        function updateCarouselUILayout() {
+            carouselSlides.forEach((slide, idx) => {
+                if(idx === activeCarouselIndex) {
+                    slide.classList.add('active');
+                    if (indicatorDots[idx]) indicatorDots[idx].classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                    if (indicatorDots[idx]) indicatorDots[idx].classList.remove('active');
+                }
+            });
+        }
+
+        function shiftCarouselSlide(directionOffset) {
+            clearInterval(autoScrollTimerInstance);
+            activeCarouselIndex += directionOffset;
+            if (activeCarouselIndex >= carouselSlides.length) {
+                activeCarouselIndex = 0;
+            } else if (activeCarouselIndex < 0) {
+                activeCarouselIndex = carouselSlides.length - 1;
+            }
+            updateCarouselUILayout();
+            autoScrollTimerInstance = setInterval(() => shiftCarouselSlide(1), 5000);
+        }
+
+        /* Form Controls Controller */
+        function clearFormInputs() {
+            document.getElementById("portfolio-contact-form").reset();
+        }
+
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            const clientName = document.getElementById("contact-name").value;
+            const currentLang = localStorage.getItem('preferredPortfolioLang') || 'en';
+            
+            if (currentLang === 'es') {
+                alert(`¡Gracias, ${clientName}! Tu mensaje ha sido simulado con éxito.`);
+            } else {
+                alert(`Thank you, ${clientName}! Your message has been simulated successfully.`);
+            }
+            clearFormInputs();
         }
     </script>
 </body>
