@@ -170,6 +170,7 @@
             font-size: 0.9rem;
             color: var(--text-secondary);
             font-weight: 500;
+            align-items: center;
         }
 
         .contact-info a {
@@ -181,6 +182,23 @@
 
         .contact-info a:hover {
             color: var(--accent-corporate);
+        }
+
+        /* Flag Icon Presentation Styles */
+        .lang-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .flag-icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            object-fit: cover;
+            vertical-align: middle;
+            border: 1px solid rgba(15, 23, 42, 0.15);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         /* Two-Column Grid Separation Component */
@@ -608,7 +626,11 @@
                     <span>📍 Toronto, ON</span>
                     <span>📞 <a href="tel:+14373457315">+1 (437) 345-7315</a></span>
                     <span>✉️ <a href="mailto:alx886@gmail.com">alx886@gmail.com</a></span>
-                    <span>🗣️ English / Spanish (Bilingual)</span>
+                    <span class="lang-wrapper">
+                        🗣️ 
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="UK Flag" class="flag-icon"> English / 
+                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" alt="Spain Flag" class="flag-icon"> Spanish
+                    </span>
                 </div>
             </div>
         </header>
