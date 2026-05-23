@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Orellana | Technical Solutions Consultant & Sales Enablement</title>
+    <meta name="description" content="Professional web portfolio of Manuel Orellana, an award-winning Technical Solutions Consultant with 25 years of expertise in IT infrastructure, mobility, and enterprise workflows.">
+    <style>
+        /* Modern CSS Reset & Variable Definitions */
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #ef4444; /* Modern Crimson */
+            --accent-hover: #dc2626;
+            --border: #334155;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Grid Framework for Header/Profile */
+        header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            header {
+                grid-template-columns: 200px 1fr;
+            }
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--border);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-text h1 span {
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-info a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Main Content Split (2 Column Layout) */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 992px) {
+            .main-layout {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* Highlights/Accomplishments Callouts */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .highlights-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Work Experience Styling */
+        .job-card {
+            margin-bottom: 2.5rem;
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .job-company {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .job-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .job-bullets {
+            list-style-type: none;
+        }
+
+        .job-bullets li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .job-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Skills Pill Layout */
+        .skills-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-group h3 {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.7rem;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .tag:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        
+        <header>
+            <img src="https://i.ibb.co/0yLGMsWS/IMG-4095.jpg" alt="Manuel Orellana Portrait" class="profile-img" crossorigin="anonymous">
+            <div class="header-text">
+                <h1>MANUEL <span>ORELLANA</span></h1>
+                <div class="tagline">Technical Solutions Consultant & Sales Enablement</div>
+                <div class="contact-info">
+                    <span>📍 Toronto, ON</span>
+                    <span>📞 <a href="tel:+16472410612">(647) 241-0612</a></span>
+                    <span>✉️ <a href="mailto:alx886@gmail.com">alx886@gmail.com</a></span>
+                    <span>🗣️ English / Spanish (Bilingual)</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            
+            <main id="main-content">
+                
+                <section aria-labelledby="summary-title">
+                    <h2 id="summary-title">Professional Summary</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.05rem;">
+                        Personable Technology Specialist with 25 years' success leveraging deep technical infrastructure expertise to drive business growth and enable sales success. Adept at bridging the gap between complex engineering architectures and client-facing business value. Proven champion in workflow optimization, multi-million dollar corporate mobility deployments, and cross-continental incident management.
+                    </p>
+                </section>
+
+                <section aria-labelledby="metrics-title">
+                    <h2 id="metrics-title">Key Accomplishments</h2>
+                    <div class="highlights-grid">
+                        <div class="stat-card">
+                            <strong>$100,000+ Saved</strong>
+                            Negotiated wireless service contract terms saving the organization over 100K over 3 years.
+                        </div>
+                        <div class="stat-card">
+                            <strong>$50,000/yr & 13 Days</strong>
+                            Migrated 400+ devices from Workspace One to Intune in record time, cutting licensing costs.
+                        </div>
+                        <div class="stat-card">
+                            <strong>President's Award Co-Recipient</strong>
+                            Honored with the Canon Americas President Award (2020) and multiple Canon Canada President Awards.
+                        </div>
+                        <div class="stat-card">
+                            <strong>200+ Hours Recovered</strong>
+                            Saved deployment times by fully implementing Apple Business Manager protocols.
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="experience-title">
+                    <h2 id="experience-title">Work History</h2>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title">Technical Solutions Consultant (Sales Enablement)</span><br>
+                                <span class="job-company">Canon Canada Inc., Brampton, ON</span>
+                            </div>
+                            <span class="job-date">03/2022 to Current</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Own technical accountability for 2 primary product portfolios: Enterprise Business Scanners and Small Office / Commercial printing ecosystems.</li>
+                            <li>Partner closely with the Sales Enablement team to map prospective customer workflows, showing architectural bottlenecks and presenting custom technical remedies that secure organizational buy-in.</li>
+                            <li>Deliver high-tier engineering troubleshooting, resolving complex integration faults for clients with active configurations.</li>
+                            <li>Aggregate field data and user feedback to deliver strategic feature insights directly to global product management teams.</li>
+                            <li>Gained widespread customer acceptance by presenting objective proof-of-concept demonstrations focusing on cost reductions and operations improvements.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title">Client Technology Specialist</span><br>
+                                <span class="job-company">Canon Canada Inc.</span>
+                            </div>
+                            <span class="job-date">08/2009 to 02/2022</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Provided dedicated, executive-tier technology support across the organization, ensuring zero-downtime solutions for enterprise leaders.</li>
+                            <li>Architected and managed corporate Mobile Device Management (MDM) platforms utilizing Microsoft Intune and Workspace One to secure and deploy corporate assets.</li>
+                            <li>Served as the infrastructure point-person for 3 nationwide logistics warehouses, maintaining high-availability status for hardware, PCs, and mission-critical mobile scanner terminals.</li>
+                            <li>Authored and maintained a comprehensive technical knowledgebase utilized by internal IT departments and 3rd-party corporate support providers across North America.</li>
+                            <li>Engineered creative solutions minimizing IT operational expenditures without compromising infrastructural integrity or service quality.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title">Training & Knowledge Management</span><br>
+                                <span class="job-company">Siemens Business Services</span>
+                            </div>
+                            <span class="job-date">09/2005 to 06/2009</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Designed and executed comprehensive onboarding architectures to successfully scale technical service desk operations in high-velocity environments.</li>
+                            <li>Spearheaded international operations ramp-up in the Philippines, successfully training 50 corporate engineers on core infrastructure applications and custom network layouts.</li>
+                            <li>Authored end-to-end training modules covering Active Directory architectures, secure VPN tunneling, and enterprise communication environments.</li>
+                        </ul>
+                    </article>
+
+                    <article class="job-card">
+                        <div class="job-header">
+                            <div>
+                                <span class="job-title">Incident Management Specialist</span><br>
+                                <span class="job-company">Siemens Business Services</span>
+                            </div>
+                            <span class="job-date">09/2006 to 09/2007</span>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Evaluated and brokered hundreds of complex high-priority escalations daily submitted by Tier-1 teams across diverse time zones.</li>
+                            <li>Acted as the cross-continental integration bridge linking localized deskside support networks across the US, UK, Belgium, Germany, Spain, Italy, and Ireland.</li>
+                            <li>Analyzed root-cause telemetry data from closed incidents to construct preventive maintenance frameworks, significantly decreasing ticket recurrence rates.</li>
+                        </ul>
+                    </article>
+
+                </section>
+
+            </main>
+
+            <aside aria-label="Skills and Certifications">
+                
+                <section aria-labelledby="skills-title">
+                    <h2 id="skills-title">Expertise</h2>
+                    
+                    <div class="skills-group">
+                        <h3>Enterprise Mobility (MDM)</h3>
+                        <div class="skills-tags">
+                            <span class="tag">Microsoft Intune</span>
+                            <span class="tag">Workspace One</span>
+                            <span class="tag">Apple Business Manager</span>
+                            <span class="tag">iOS Deployment</span>
+                            <span class="tag">Android Enterprise</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3>Systems & Identity</h3>
+                        <div class="skills-tags">
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Azure AD / Entra ID</span>
+                            <span class="tag">Windows Server Config</span>
+                            <span class="tag">macOS Enterprise</span>
+                            <span class="tag">Microsoft 365 / SharePoint</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3>Infrastructure & Tools</h3>
+                        <div class="skills-tags">
+                            <span class="tag">TCP/IP Networking</span>
+                            <span class="tag">VPN Connectivity</span>
+                            <span class="tag">VMware Workstation</span>
+                            <span class="tag">Oracle VirtualBox</span>
+                            <span class="tag">HP PPM System</span>
+                            <span class="tag">WMS & AS/400 Basics</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section aria-labelledby="certs-title">
+                    <h2 id="certs-title">Certifications</h2>
+                    <div class="job-card" style="margin-bottom: 0; padding: 1rem;">
+                        <strong>ITIL Foundations 4</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Issued Sept 2020</p>
+                    </div>
+                </section>
+
+                <section aria-labelledby="edu-title" style="margin-top: 3rem;">
+                    <h2 id="edu-title">Education</h2>
+                    <div style="font-size: 0.95rem; margin-bottom: 1rem;">
+                        <strong>Network Engineering Studies</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.85rem;">Xintra Computer College, Mississauga, ON</span>
+                    </div>
+                    <div style="font-size: 0.95rem;">
+                        <strong>High School Diploma</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.85rem;">Michael Power St. Joseph HS, Toronto, ON</span>
+                    </div>
+                </section>
+
+            </aside>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Manuel Orellana. Built with semantic HTML5 for maximum speed and accessibility.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
