@@ -3,59 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Orellana | Technical Solutions Consultant & Full-Stack Innovator</title>
-    <meta name="description" content="Professional web portfolio of Manuel Orellana, an award-winning Technical Solutions Consultant with 25 years of expertise in enterprise workflows, document systems, and full-stack web applications.">
-    
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="Manuel Orellana, Technical Solutions Consultant, Systems Innovator, Intune MDM, imageFORCE, Canon Canada, Full-Stack Web Development, Toronto Tech Consultant">
-    <link rel="canonical" href="https://alx886.github.io/myresume/">
-
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Manuel Orellana | Technical Solutions Consultant & Full-Stack Innovator">
-    <meta property="og:description" content="25+ years of cross-functional excellence in enterprise engineering, technical operations, and full-stack system architecture.">
-    <meta property="og:url" content="https://alx886.github.io/myresume/">
-    <meta property="og:image" content="https://i.ibb.co/hxCX8r30/Profile-Picture-2.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Manuel Orellana",
-      "jobTitle": "Technical Solutions Consultant & Full-Stack Systems Innovator",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Canon Canada Inc."
-      },
-      "url": "https://alx886.github.io/myresume/",
-      "image": "https://i.ibb.co/hxCX8r30/Profile-Picture-2.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/manuel-orellana-41538012/"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      }
-    }
-    </script>
-
+    <title>Personal Sales &amp; Opportunity Manager</title>
     <style>
-        /* Professional Light Grey & Slate CSS Variable Definitions */
+        /* Modern Clean CSS Variable Architecture Definitions */
         :root {
-            --text-primary: #0f172a;     
-            --text-secondary: #334155;   
-            --accent-corporate: #1d4ed8; 
-            --accent-hover: #1e40af;
-            --accent-pdf: #ee3124;      
-            --accent-pdf-hover: #c92216;
-            --border-slate: #cbd5e1;     
-            --tag-bg: #e2e8f0;           
-            --card-bg: rgba(241, 245, 249, 0.8); 
-            --form-control-bg: #f1f5f9;  
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --canon-red: #cc0000;
+            --canon-dark-red: #990000;
+            --neutral-white: #ffffff;
+            --neutral-light-1: #f8f9fa;
+            --neutral-light-2: #e9ecef;
+            --neutral-light-3: #dee2e6;
+            --neutral-dark-1: #212529;
+            --neutral-dark-2: #495057;
+            --neutral-dark-3: #6c757d;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --transition-fast: 0.2s ease;
         }
 
+        /* Core Element Layout Rules */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -63,617 +31,451 @@
         }
 
         body {
-            color: var(--text-primary);
-            font-family: var(--font-stack);
-            line-height: 1.6;
-            padding: 0;
-            min-height: 100vh;
-            background-color: #e2e8f0;
-            background-image: 
-                radial-gradient(at 0% 0%, #cbd5e1 0px, transparent 65%),
-                radial-gradient(at 100% 0%, #e2e8f0 0px, transparent 60%),
-                radial-gradient(at 100% 100%, #94a3b8 0px, transparent 40%),
-                radial-gradient(at 0% 100%, #cbd5e1 0px, transparent 70%);
-            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--neutral-light-1);
+            color: var(--neutral-dark-1);
+            line-height: 1.5;
+            padding-bottom: 40px;
         }
 
+        /* Accessible Skip Link Entry Point */
         .skip-link {
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--accent-corporate);
-            color: white;
+            background: var(--canon-red);
+            color: var(--neutral-white);
             padding: 8px;
             z-index: 100;
-            transition: top 0.2s;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
+            transition: top var(--transition-fast);
         }
+        .skip-link:focus { top: 0; }
 
-        .skip-link:focus {
-            top: 0;
-        }
-
-        /* Top Utility Bar for Language Selector */
-        .top-utility-bar {
-            width: 100%;
-            background-color: rgba(226, 232, 240, 0.9);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--border-slate);
-            padding: 0.75rem 2rem;
-        }
-
-        .top-utility-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .lang-switch-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 0.25rem;
-        }
-
-        .lang-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .lang-switch-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            background: rgba(241, 245, 249, 0.9);
-            padding: 0.25rem;
-            border-radius: 20px;
-            border: 1px solid var(--border-slate);
-        }
-
-        .lang-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-            padding: 0.25rem 0.6rem;
-            border-radius: 12px;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn:hover {
-            color: var(--text-primary);
-        }
-
-        .lang-btn.active {
-            background-color: var(--text-primary);
-            color: #ffffff;
-        }
-
-        .flag-icon {
-            width: 14px;
-            height: 10px;
-            object-fit: cover;
-            border-radius: 1px;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        /* Layout Architecture Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 2rem 3rem 2rem;
-        }
-
+        /* Header Component Markup Design */
         header {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid var(--border-slate);
-            margin-bottom: 3rem;
+            background-color: var(--neutral-white);
+            border-bottom: 2px solid var(--neutral-light-3);
+            padding: 20px 40px;
+            box-shadow: var(--shadow-sm);
         }
 
-        @media (min-width: 768px) {
-            header {
-                grid-template-columns: 180px 1fr;
-            }
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center 18%; 
-            border: 1px solid var(--border-slate);
-            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
-        }
-
-        .header-text h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            margin-bottom: 0.25rem;
-            color: var(--text-primary);
-        }
-
-        .header-text h1 span {
-            color: var(--accent-corporate);
-            font-weight: 400;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.25rem;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-        }
-
-        .contact-layout-wrapper {
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            max-width: 1600px;
+            margin: 0 auto;
         }
 
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-            align-items: center;
-        }
-
-        .contact-info a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.2s;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-corporate);
-        }
-
-        .pdf-download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background-color: var(--accent-pdf);
-            color: #ffffff !important;
-            text-decoration: none;
-            padding: 0.65rem 1.2rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 10px rgba(238, 49, 36, 0.15);
-            border: none;
-            cursor: pointer;
-        }
-
-        .pdf-download-btn:hover {
-            background-color: var(--accent-pdf-hover);
-            transform: translateY(-1px);
-        }
-
-        .main-layout {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
-        }
-
-        @media (min-width: 992px) {
-            .main-layout {
-                grid-template-columns: 2fr 1fr;
-            }
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            margin-bottom: 1.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-primary);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        h2::after {
-            content: '';
-            flex-grow: 1;
-            height: 1px;
-            background: var(--border-slate);
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.25rem;
-            margin-bottom: 2.5rem;
-        }
-
-        @media (min-width: 600px) {
-            .highlights-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .stat-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-slate);
-            box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
-        }
-
-        .stat-card strong {
-            display: block;
-            font-size: 1.15rem;
-            color: var(--accent-corporate);
-            margin-bottom: 0.35rem;
+        .branding h1 {
+            font-size: 1.5rem;
+            color: var(--neutral-dark-1);
             font-weight: 700;
         }
 
-        .stat-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            font-weight: 500;
+        .branding p {
+            font-size: 0.875rem;
+            color: var(--neutral-dark-3);
+            margin-top: 2px;
         }
 
-        .job-card {
-            margin-bottom: 2.5rem;
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 1.75rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-slate);
-            box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: baseline;
-            margin-bottom: 1.25rem;
-            gap: 0.5rem;
-        }
-
-        .job-title {
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .job-company {
-            color: var(--text-secondary);
+        .branding .user-tag {
+            color: var(--canon-red);
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-top: 0.15rem;
-            display: inline-block;
         }
 
-        .job-date {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            background: var(--tag-bg);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            border: 1px solid var(--border-slate);
-        }
-
-        .job-bullets {
-            list-style-type: none;
-        }
-
-        .job-bullets li {
-            position: relative;
-            padding-left: 1.25rem;
-            margin-bottom: 0.85rem;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .job-bullets li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--accent-corporate);
-            font-weight: bold;
-        }
-
-        .skills-group {
-            margin-bottom: 1.75rem;
-        }
-
-        .skills-group h3 {
-            font-size: 0.9rem;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-
-        .skills-tags {
+        /* Navigation Management Element System */
+        nav ul {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tag {
-            background: var(--tag-bg);
-            color: var(--text-secondary);
-            padding: 0.35rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid var(--border-slate);
-            transition: all 0.2s ease;
-        }
-
-        .tag:hover {
-            border-color: #94a3b8;
-            background-color: #cbd5e1;
-            color: var(--text-primary);
-        }
-
-        .linkedin-badge-btn {
-            display: inline-flex;
+            list-style: none;
+            gap: 20px;
             align-items: center;
-            gap: 0.5rem;
-            background-color: #0077b5; 
-            color: #ffffff;
+        }
+
+        nav a {
             text-decoration: none;
-            padding: 0.7rem 1.2rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            color: var(--neutral-dark-2);
             font-weight: 600;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2);
-            width: 100%;
-            justify-content: center;
-            margin-bottom: 1.25rem;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition-fast);
         }
 
-        .linkedin-badge-btn:hover {
-            background-color: #005582;
-            transform: translateY(-1px);
+        nav a:hover, nav a.active {
+            background-color: var(--neutral-light-2);
+            color: var(--canon-red);
         }
 
-        .carousel-wrapper {
-            position: relative;
-            background: var(--card-bg);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid var(--border-slate);
-            border-radius: 8px;
-            padding: 1.5rem;
-            overflow: hidden;
-            min-height: 200px;
-            box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);
-        }
-
-        .carousel-track {
-            position: relative;
-            height: 100%;
-        }
-
-        .carousel-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+        /* Global Application Container Structure */
+        main {
+            max-width: 1600px;
+            margin: 30px auto;
+            padding: 0 40px;
             display: flex;
             flex-direction: column;
-            text-decoration: none;
-            color: inherit;
+            gap: 30px;
         }
 
-        .carousel-item.active {
-            position: relative;
-            opacity: 1;
-            visibility: visible;
+        /* Summary Dashboard Cards Grid Component Layout */
+        .summary-dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        .recommendation-text {
-            font-style: italic;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            font-weight: 500;
+        .summary-card {
+            background: var(--neutral-white);
+            padding: 20px 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--neutral-light-3);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
 
-        .carousel-item:hover .recommendation-text {
-            color: var(--text-primary);
-        }
-
-        .recommendation-author {
-            font-size: 0.85rem;
+        .summary-card h2 {
+            font-size: 0.8125rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--neutral-dark-3);
             font-weight: 700;
-            color: #0077b5;
         }
 
-        .recommendation-title {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            margin-top: 0.15rem;
+        .summary-metric-primary {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--neutral-dark-1);
+        }
+
+        .summary-metric-secondary {
+            font-size: 0.875rem;
             font-weight: 600;
+            color: var(--neutral-dark-3);
         }
 
-        .carousel-controls {
+        .summary-card.accent-card {
+            border-left: 4px solid var(--canon-red);
+        }
+
+        /* Primary Content Area Controls & Actions Grid */
+        .dashboard-actions {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 1.25rem;
-            padding-top: 0.75rem;
-            border-top: 1px dashed var(--border-slate);
+            background: var(--neutral-white);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--neutral-light-3);
+            box-shadow: var(--shadow-sm);
         }
 
-        .carousel-btn {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
+        /* Production UI Standard Button Definitions */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
             cursor: pointer;
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            transition: all 0.2s;
+            transition: all var(--transition-fast);
+            border: none;
         }
 
-        .carousel-btn:hover {
-            color: var(--text-primary);
-            background-color: var(--tag-bg);
+        .btn-primary {
+            background-color: var(--canon-red);
+            color: var(--neutral-white);
         }
+        .btn-primary:hover { background-color: var(--canon-dark-red); }
 
-        .carousel-indicators {
+        .btn-secondary {
+            background-color: var(--neutral-light-2);
+            color: var(--neutral-dark-1);
+            border: 1px solid var(--neutral-light-3);
+        }
+        .btn-secondary:hover { background-color: var(--neutral-light-3); }
+
+        .btn-danger {
+            background-color: transparent;
+            color: var(--canon-red);
+            padding: 4px 8px;
+        }
+        .btn-danger:hover { background-color: #fff0f0; }
+
+        .btn-group {
             display: flex;
-            gap: 0.4rem;
+            gap: 10px;
         }
 
-        .indicator-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: #94a3b8;
-            transition: background-color 0.2s;
+        /* Filter Controls Panel Container Form Layout */
+        .filters-panel {
+            background: var(--neutral-white);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--neutral-light-3);
+            box-shadow: var(--shadow-sm);
         }
 
-        .indicator-dot.active {
-            background-color: #0077b5;
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
         }
 
         .form-group {
-            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
         .form-group label {
-            display: block;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-bottom: 0.4rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--neutral-dark-2);
         }
 
         .form-control {
             width: 100%;
-            background-color: var(--form-control-bg);
-            border: 1px solid var(--border-slate);
-            border-radius: 6px;
-            padding: 0.65rem;
-            color: var(--text-primary);
-            font-family: var(--font-stack);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            padding: 8px 12px;
+            font-size: 0.875rem;
+            border: 1px solid var(--neutral-light-3);
+            border-radius: var(--radius-sm);
+            background-color: var(--neutral-light-1);
+            color: var(--neutral-dark-1);
+            transition: border var(--transition-fast);
         }
-
         .form-control:focus {
             outline: none;
-            border-color: var(--accent-corporate);
-            box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
-            background-color: #e2e8f0;
+            border-color: var(--canon-red);
         }
 
-        textarea.form-control {
-            resize: vertical;
-            min-height: 100px;
+        /* Opportunities Core Output Table Layout Styling */
+        .table-responsive {
+            width: 100%;
+            background: var(--neutral-white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--neutral-light-3);
+            box-shadow: var(--shadow-sm);
+            overflow-x: auto;
         }
 
-        .form-actions {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+
+        th {
+            background-color: var(--neutral-light-2);
+            color: var(--neutral-dark-1);
+            font-weight: 700;
+            padding: 14px 16px;
+            border-bottom: 2px solid var(--neutral-light-3);
+            user-select: none;
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--neutral-light-2);
+            vertical-align: top;
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr.selected-row td { background-color: #fff4f4; }
+        tr.clickable-row { cursor: pointer; }
+        tr.clickable-row:hover td { background-color: var(--neutral-light-1); }
+
+        /* Dynamic Aging Pulse Metrics Indicators Engine CSS styling */
+        .age-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        .age-green  { background-color: #2b9348; box-shadow: 0 0 8px #2b9348; animation: pulse 2s infinite; }
+        .age-yellow { background-color: #e5a93b; box-shadow: 0 0 8px #e5a93b; animation: pulse 2s infinite; }
+        .age-red    { background-color: #cc0000; box-shadow: 0 0 8px #cc0000; animation: pulse 2s infinite; }
+        .age-grey   { background-color: var(--neutral-dark-3); box-shadow: none; }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.7; }
+        }
+
+        /* Bottom Sheet Element Structure for Deal Opportunity Explorer Window */
+        .inspector-panel {
+            background: var(--neutral-white);
+            border-radius: var(--radius-md);
+            border: 2px solid var(--neutral-light-3);
+            box-shadow: var(--shadow-md);
+            padding: 24px;
+        }
+
+        .inspector-panel h2 {
+            font-size: 1.25rem;
+            color: var(--neutral-dark-1);
+            border-bottom: 2px solid var(--neutral-light-2);
+            padding-bottom: 10px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .inspector-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .inspector-block h3 {
+            font-size: 0.9375rem;
+            color: var(--canon-red);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metadata-list dt {
+            font-weight: 600;
+            font-size: 0.8125rem;
+            color: var(--neutral-dark-3);
+            margin-top: 8px;
+        }
+
+        .metadata-list dd {
+            font-size: 0.875rem;
+            color: var(--neutral-dark-1);
+            margin-bottom: 8px;
+            padding-left: 2px;
+        }
+
+        .notes-log-container {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid var(--neutral-light-2);
+            background: var(--neutral-light-1);
+            padding: 10px;
+            border-radius: var(--radius-sm);
+        }
+
+        .note-entry {
+            font-size: 0.8125rem;
+            padding: 8px;
+            border-bottom: 1px solid var(--neutral-light-3);
+        }
+        .note-entry:last-child { border-bottom: none; }
+        .note-timestamp {
+            font-weight: 600;
+            color: var(--neutral-dark-3);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* Dialog Window Accessibility Modals Layer Rules styling */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-fast);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--neutral-white);
+            border-radius: var(--radius-md);
+            width: 100%;
+            max-width: 750px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--neutral-light-3);
+            transform: translateY(-20px);
+            transition: transform var(--transition-fast);
+        }
+
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .modal-header {
+            background-color: var(--neutral-light-1);
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--neutral-light-3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header h2 { font-size: 1.125rem; }
+        .modal-body { padding: 24px; }
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--neutral-light-3);
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            background-color: var(--neutral-light-1);
+        }
+
+        .form-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
+            gap: 16px;
+            margin-bottom: 16px;
         }
-
-        .btn {
-            font-family: var(--font-stack);
-            font-size: 0.85rem;
+        .fieldset-nested {
+            border: 1px solid var(--neutral-light-3);
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 16px;
+            background-color: var(--neutral-light-1);
+        }
+        .fieldset-nested legend {
+            font-size: 0.8125rem;
             font-weight: 700;
-            padding: 0.65rem;
-            border-radius: 6px;
-            cursor: pointer;
-            border: none;
-            transition: all 0.2s ease;
-            text-align: center;
+            padding: 0 6px;
+            color: var(--neutral-dark-2);
         }
-
-        .btn-submit {
-            background-color: var(--accent-corporate);
-            color: #ffffff;
-            box-shadow: 0 2px 4px rgba(29, 78, 216, 0.1);
+        .hidden-field-block { display: none; }
+        .product-pitch-row {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
         }
-
-        .btn-submit:hover {
-            background-color: var(--accent-hover);
-        }
-
-        .btn-clear {
-            background-color: var(--tag-bg);
-            color: var(--text-secondary);
-            border: 1px solid var(--border-slate);
-        }
-
-        .btn-clear:hover {
-            background-color: #cbd5e1;
-            color: var(--text-primary);
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 0 1rem 0;
-            margin-top: 5rem;
-            border-top: 1px solid var(--border-slate);
-            color: var(--text-secondary);
-            font-size: 0.85rem;
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.75rem;
             font-weight: 600;
+            border-radius: 4px;
+            background-color: var(--neutral-light-3);
+            color: var(--neutral-dark-1);
+        }
+        .lang-select-container select {
+            padding: 4px 8px;
+            font-size: 0.875rem;
+            border: 1px solid var(--neutral-light-3);
+            border-radius: var(--radius-sm);
+            background-color: var(--neutral-white);
+            color: var(--neutral-dark-1);
+            cursor: pointer;
         }
     </style>
 </head>
@@ -681,420 +483,961 @@
 
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="top-utility-bar">
-        <div class="top-utility-inner">
-            <div class="lang-switch-wrapper">
-                <div class="lang-label" data-en="View in" data-es="Ver en">View in</div>
-                <div class="lang-switch-container">
-                    <button class="lang-btn active" id="btn-lang-en" onclick="setGlobalAppLanguage('en')" aria-label="Switch page to English">
-                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg" alt="" class="flag-icon"> EN
-                    </button>
-                    <button class="lang-btn" id="btn-lang-es" onclick="setGlobalAppLanguage('es')" aria-label="Cambiar página a Español">
-                        <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/es.svg" alt="" class="flag-icon"> ES
-                    </button>
+    <header role="banner">
+        <div class="header-container">
+            <div class="branding">
+                <h1>Personal Sales &amp; Opportunity Manager</h1>
+                <p style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <span>Sales Enablement Specialist: <span class="user-tag">Manuel Orellana</span></span>
+                    <span class="badge" style="background-color: var(--neutral-light-2); border: 1px solid var(--neutral-light-3); display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px; vertical-align: middle;">
+                        <span>🇨🇦</span> <span>EN/FR</span> <span style="font-size: 0.65rem; color: var(--neutral-dark-3); font-weight: bold; text-transform: uppercase; margin-left: 2px;">Bilingual</span>
+                    </span>
+                </p>
+            </div>
+            <nav role="navigation" aria-label="Main Application Links">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Pipeline Dashboard</a></li>
+                    <li><a href="analytics.html">Data &amp; Analytics</a></li>
+                    <li class="lang-select-container">
+                        <select aria-label="Select Language">
+                            <option value="en">English (CA)</option>
+                            <option value="fr">Français (CA)</option>
+                        </select>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+
+        <section class="summary-dashboard-grid" aria-label="Pipeline Live Summary Scorecards">
+            <div class="summary-card accent-card">
+                <h2>Active Pipeline Total Value</h2>
+                <div class="summary-metric-primary" id="dashboard-active-pipeline-value">$0.00</div>
+                <div class="summary-metric-secondary">(Excludes Closed Won/Lost)</div>
+            </div>
+            <div class="summary-card">
+                <h2>Won Deals Count</h2>
+                <div class="summary-metric-primary" id="dashboard-won-deals-count">0 File Records</div>
+                <div class="summary-metric-secondary" id="dashboard-won-deals-value" style="color: #2b9348; font-weight: 700;">$0.00 Total Revenue</div>
+            </div>
+        </section>
+
+        <section class="dashboard-actions" aria-label="Pipeline Actions Control Toolbar">
+            <button type="button" class="btn btn-primary" id="btn-open-create-modal" aria-haspopup="dialog">
+                + Create Opportunity
+            </button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" id="btn-export-json">Export Database Backup (JSON)</button>
+                <button type="button" class="btn btn-secondary" id="btn-trigger-import">Import Database (JSON)</button>
+                <input type="file" id="file-import-json" accept=".json" class="hidden-field-block" aria-hidden="true">
+            </div>
+        </section>
+
+        <section class="filters-panel" aria-label="Opportunities Sorting and Query Filters Matrix">
+            <div class="filters-grid">
+                <div class="form-group">
+                    <label id="lbl-search">Search Account / Deal</label>
+                    <input type="text" id="filter-search" class="form-control" placeholder="Type name or account..." aria-labelledby="lbl-search">
+                </div>
+                <div class="form-group">
+                    <label id="lbl-status-grp">Deal Status Group</label>
+                    <select id="filter-status-group" class="form-control" aria-labelledby="lbl-status-grp">
+                        <option value="ALL">All Deals</option>
+                        <option value="ACTIVE" selected>Active Deals Only</option>
+                        <option value="CLOSED_WON">Closed - Won</option>
+                        <option value="CLOSED_LOST">Closed - Lost</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="lbl-pipe-filter">Pipeline Stage</label>
+                    <select id="filter-pipeline-stage" class="form-control" aria-labelledby="lbl-pipe-filter">
+                        <option value="ALL">All Stages</option>
+                        <option value="Lead Development">Lead Development</option>
+                        <option value="Discovery">Discovery</option>
+                        <option value="Proposal Draft">Proposal Draft</option>
+                        <option value="Negotiation">Negotiation</option>
+                        <option value="Closed Won">Closed Won</option>
+                        <option value="Closed Lost">Closed Lost</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="lbl-channel-filter">Sales Channel</label>
+                    <select id="filter-channel-origin" class="form-control" aria-labelledby="lbl-channel-filter">
+                        <option value="ALL">All Channels</option>
+                        <option value="Direct Sales">Direct Sales</option>
+                        <option value="Dealer Channel">Dealer Channel</option>
+                        <option value="Distribution">Distribution</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="lbl-rep-filter">Sales Representative Assigned</label>
+                    <select id="filter-sales-rep" class="form-control" aria-labelledby="lbl-rep-filter">
+                        <option value="ALL">All Representatives</option>
+                    </select>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="container">
-        
-        <header>
-            <img src="https://i.ibb.co/hxCX8r30/Profile-Picture-2.png" alt="Manuel Orellana Portrait" class="profile-img" crossorigin="anonymous">
-            <div class="header-text">
-                <h1>MANUEL <span>ORELLANA</span></h1>
-                <div class="tagline" 
-                     data-en="Technical Solutions Consultant & Full-Stack Systems Innovator" 
-                     data-es="Consultor de Soluciones Técnicas e Innovador Full-Stack">
-                     Technical Solutions Consultant & Full-Stack Systems Innovator
-                </div>
-                <div class="contact-layout-wrapper">
-                    <div class="contact-info">
-                        <span>📍 Toronto, ON</span>
-                        <span>📞 <a href="tel:+16472410612">(647) 241-0612</a></span>
-                        <span>✉️ <a href="mailto:alx886@gmail.com">alx886@gmail.com</a></span>
+        <section class="table-responsive" aria-label="Active Sales Opportunities Data Grid">
+            <table id="opportunities-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Age</th>
+                        <th scope="col">Account &amp; Project Description</th>
+                        <th scope="col">Value (CAD)</th>
+                        <th scope="col">Assigned Rep</th>
+                        <th scope="col">Channel / Partner</th>
+                        <th scope="col">Current Stage</th>
+                        <th scope="col">Customer Type</th>
+                        <th scope="col">Dates &amp; Activities</th>
+                        <th scope="col" style="width: 110px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="opportunities-tbody">
+                </tbody>
+            </table>
+        </section>
+
+        <section class="inspector-panel" id="deal-inspector" aria-label="Opportunity Detailed Record Context Explorer Inspector View">
+            <h2>
+                <span>Deal Detail Opportunity Inspector View</span>
+                <span id="inspect-active-uid" class="badge">No Opportunity Highlighted</span>
+            </h2>
+            <div id="inspector-default-msg">
+                <p style="color: var(--neutral-dark-3); text-align: center; padding: 20px 0;">Select an active sales opportunity pipeline row item from the table workspace grid configuration above to fully analyze metadata logs, notes history, product quantities configuration and historical target modifications logs.</p>
+            </div>
+            <div id="inspector-content-view" class="hidden-field-block">
+                <div class="inspector-grid">
+                    <div class="inspector-block">
+                        <h3>Core Meta Framework</h3>
+                        <dl class="metadata-list">
+                            <dt>Company Name</dt>
+                            <dd id="inspect-comp-name">-</dd>
+                            <dt>Project Name/Objective</dt>
+                            <dd id="inspect-proj-title">-</dd>
+                            <dt>Customer Type</dt>
+                            <dd id="inspect-account-type">-</dd>
+                            <dt>Total Compiled Gross Project Structural Financial Worth Value</dt>
+                            <dd id="inspect-financial-worth">-</dd>
+                        </dl>
                     </div>
-                    
-                    <a href="https://alx886.github.io/myresume/Manuel%20Orellana%20Resume%202026.pdf" 
-                       download="Manuel_Orellana_Resume_2026.pdf" 
-                       class="pdf-download-btn" 
-                       data-en-title="Download Official Resume PDF"
-                       data-es-title="Descargar Currículum Oficial en PDF">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 16px; height: 16px; fill: currentColor; vertical-align: middle;">
-                            <path d="M29.5,14.3c-0.3-1-1.1-2.4-2.3-3.6c-1.1-1.1-2.5-1.9-3.4-2.1c-0.3-1.1-0.7-2.6-1-4c-0.5-2.1-1.1-4.1-2-4.5c-0.2-0.1-0.5-0.1-0.8,0c-0.6,0.2-1.1,0.9-1.4,1.8c-0.6,1.9-0.5,4.5,0.2,7.3c-0.4,1.1-0.9,2.4-1.4,3.7c-0.6,1.4-1.1,2.8-1.6,4.1c-1.3,0.7-2.9,1.6-4.3,2.4c-1.6,0.9-3.1,1.8-4.2,2.7c-0.9,0.8-1.5,1.6-1.7,2.4c-0.1,0.4,0,0.8,0.3,1.1c0.4,0.5,1.2,0.8,2.3,0.8c1.6,0,3.7-1,6-2.9c2.3-0.6,4.9-1.2,7.5-1.6c1.3,0.9,2.8,1.7,4.1,2.4c1.1,0.5,2,1,2.8,1.2c0.3,0.1,0.6,0.1,0.8,0c0.8-0.3,1.3-1.4,1.3-2.7C31,17.9,30.4,15.9,29.5,14.3z M19.4,3c0.3-0.4,0.6-0.7,0.7-0.7c0.1,0,0.2,0.2,0.3,0.7c0.2,0.7,0.6,2.2,1,3.8c-0.8,0.2-1.7,0.4-2.4,0.7C18.6,5.3,18.9,3.9,19.4,3z M6.4,28.8c-0.4,0-0.7-0.1-0.8-0.2c-0.1-0.1-0.1-0.2,0-0.4c0.1-0.4,0.5-0.9,1.1-1.5c0.9-0.8,2.1-1.6,3.5-2.3C9,26.4,7.5,28.1,6.4,28.8z M14.8,18.6c0.4-1.1,0.9-2.3,1.3-3.4c0.5-1.1,0.9-2.2,1.3-3.1c0.6,0,1.3-0.1,2-0.1c0.7,0,1.4,0,1.9,0.1C19.7,14,17.1,16.5,14.8,18.6z M28.7,20.4c0,0.5-0.2,0.9-0.4,1.1c-0.1,0.1-0.3,0.1-0.5,0c-0.5-0.2-1.1-0.6-1.9-1.1c-1.1-0.6-2.3-1.4-3.5-2.2c1.2-0.3,2.4-0.6,3.4-1C27.1,18.1,28.3,19.4,28.7,20.4z"/>
-                        </svg>
-                        <span data-en="Download Resume" data-es="Descargar CV">Download Resume</span>
-                    </a>
+                    <div class="inspector-block">
+                        <h3>Distribution Logistics Workflow Structure</h3>
+                        <dl class="metadata-list">
+                            <dt>Current Stage</dt>
+                            <dd id="inspect-pipeline-stage">-</dd>
+                            <dt>Sales Channel</dt>
+                            <dd id="inspect-channel-origin">-</dd>
+                            <dt>Operational Partner Management Metadata Context Allocation</dt>
+                            <dd id="inspect-partner-context">-</dd>
+                            <dt>Sales Representative</dt>
+                            <dd id="inspect-assigned-rep">-</dd>
+                        </dl>
+                    </div>
+                    <div class="inspector-block">
+                        <h3>Lifecycle Metrics Logs</h3>
+                        <dl class="metadata-list">
+                            <dt>First Entry Date</dt>
+                            <dd id="inspect-creation-date">-</dd>
+                            <dt>System Transaction State Modification Log Delta Timestamp</dt>
+                            <dd id="inspect-modified-date">-</dd>
+                            <dt>Projected Close Date</dt>
+                            <dd id="inspect-target-close">-</dd>
+                            <dt>Next Action Date</dt>
+                            <dd id="inspect-next-action">-</dd>
+                            <dt>Calculated Total Continuous Funnel Pipeline Lifecycle Existence Age Metric</dt>
+                            <dd id="inspect-calculated-age">-</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="inspector-grid" style="grid-template-columns: 1fr 1fr; margin-top: 20px;">
+                    <div class="inspector-block">
+                        <h3>Hardware Equipment Configurations &amp; Products Pitched</h3>
+                        <ul id="inspect-products-list" style="padding-left: 20px; font-size: 0.875rem;">
+                        </ul>
+                    </div>
+                    <div class="inspector-block">
+                        <h3>Historical Administrative Status Updates &amp; Notes Logs History</h3>
+                        <div class="notes-log-container" id="inspect-notes-log">
+                        </div>
+                        <div class="form-group" style="margin-top: 10px; display: flex; flex-direction: row; gap: 8px;">
+                            <input type="text" id="append-note-text" class="form-control" placeholder="Append quick note directly to active log file repository...">
+                            <button type="button" class="btn btn-primary" id="btn-append-note">Append</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>
+        </section>
+    </main>
 
-        <div class="main-layout">
-            
-            <main id="main-content">
-                
-                <section aria-labelledby="summary-title">
-                    <h2 id="summary-title" data-en="Professional Summary" data-es="Resumen Profesional">Professional Summary</h2>
-                    <p style="color: var(--text-secondary); font-size: 1.05rem; font-weight: 500;"
-                       data-en="Innovative, forward-thinking Technology Specialist and Solutions Consultant with over 25 years of cross-functional excellence in enterprise technical engineering, systems optimization, and client enablement. Expert in bridging the gap between intricate hardware architectures and agile software solutions. A passion-driven tech evangelist with deep competencies in Full-Stack Web Development and Applied Artificial Intelligence. Recognized for an outside-the-box engineering mindset, specializing in developing custom software applications to streamline operational deficiencies, optimize high-stakes sales pipelines, and solve real-world logistical bottlenecks."
-                       data-es="Especialista tecnológico y consultor de soluciones innovador y vanguardista con más de 25 años de excelencia multifuncional en ingeniería técnica empresarial, optimización de sistemas y habilitación de clientes. Experto en cerrar la brecha entre arquitecturas de hardware complejas y soluciones de software ágiles. Evangelista tecnológico apasionado con profundas competencias en Desarrollo Web Full-Stack e Inteligencia Artificial Aplicada. Reconocido por una mentalidad de ingeniería fuera de lo común, especializado en desarrollar aplicaciones de software personalizadas para agilizar deficiencias operativas, optimizar canales de ventas de alto riesgo y resolver cuellos de botella logísticos del mundo real.">
-                        Innovative, forward-thinking Technology Specialist and Solutions Consultant with over 25 years of cross-functional excellence in enterprise technical engineering, systems optimization, and client enablement. Expert in bridging the gap between intricate hardware architectures and agile software solutions. A passion-driven tech evangelist with deep competencies in Full-Stack Web Development and Applied Artificial Intelligence. Recognized for an outside-the-box engineering mindset, specializing in developing custom software applications to streamline operational deficiencies, optimize high-stakes sales pipelines, and solve real-world logistical bottlenecks. 
-                    </p>
-                </section>
-
-                <section aria-labelledby="metrics-title">
-                    <h2 id="metrics-title" data-en="Key Accomplishments" data-es="Logros Clave">Key Accomplishments</h2>
-                    <div class="highlights-grid">
-                        <div class="stat-card">
-                            <strong data-en="$100,000+ Operational Savings" data-es="+$100,000 de Ahorro Operativo">$100,000+ Operational Savings</strong>
-                            <p data-en="Negotiated structural wireless service contract terms saving the organization over 100K over 3 years." data-es="Negoció los términos del contrato de servicios inalámbricos estructurales ahorrando a la organización más de 100K en 3 años.">Negotiated structural wireless service contract terms saving the organization over 100K over 3 years.</p>
-                        </div>
-                        <div class="stat-card">
-                            <strong data-en="$50,000/yr & 13 Days" data-es="$50,000/año y 13 Días">$50,000/yr & 13 Days</strong>
-                            <p data-en="Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs." data-es="Migró más de 400 dispositivos corporativos de Workspace One a Intune en tiempo récord, recortando los costos anuales de licencia.">Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs.</p>
-                        </div>
-                        <div class="stat-card">
-                            <strong data-en="President's Award Recipient" data-es="Ganador del Premio del Presidente">President's Award Recipient</strong>
-                            <p data-en="Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence." data-es="Galardonado con el Premio del Presidente de Canon Americas y múltiples Premios del Presidente de Canon Canada por la excelencia en la implementación.">Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence.</p>
-                        </div>
-                        <div class="stat-card">
-                            <strong data-en="200+ Hours Recovered" data-es="+200 Horas Recuperadas">200+ Hours Recovered</strong>
-                            <p data-en="Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows." data-es="Eliminó la latencia de configuración de dispositivos mediante la arquitectura de flujos de protocolos automatizados en Apple Business Manager.">Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section aria-labelledby="portfolio-title">
-                    <h2 id="portfolio-title" data-en="AI Projects & Technical Innovation" data-es="Proyectos de IA e Innovación Técnica">AI Projects & Technical Innovation</h2>
-
-                    <article class="job-card" style="border-top: 3px solid #10b981;">
-                        <div class="job-header">
-                            <div>
-                                <span class="job-title" data-en="Enterprise Sales & Logistics Opportunity CRM" data-es="CRM de Oportunidades de Logística y Ventas Empresariales">Enterprise Sales & Logistics Opportunity CRM</span><br>
-                                <span class="job-company" data-en="Independent Software Architecture Initiative" data-es="Iniciativa Independiente de Arquitectura de Software">Independent Software Architecture Initiative</span>
-                            </div>
-                            <span class="job-date" data-en="Continuous Innovation" data-es="Innovación Continua">Continuous Innovation</span>
-                        </div>
-                        <ul class="job-bullets">
-                            <li data-en="<strong>UI/UX Variable Architecture:</strong> Built a production-ready, clean front-end application leveraging modularized native CSS variables, flexbox structures, and dynamic grid layouts to manage localized account data pipelines."
-                                data-es="<strong>Arquitectura de Variables UI/UX:</strong> Construyó una aplicación front-end limpia y lista para producción aprovechando variables CSS nativas modularizadas, estructuras flexbox y diseños de cuadrícula dinámicos para gestionar flujos de datos de cuentas localizadas."></li>
-                            <li data-en="<strong>Asynchronous State Management:</strong> Designed functional state preservation bindings to automatically sync local storage states and refresh dashboard layouts dynamically upon tracking events."
-                                data-es="<strong>Gestión de Estado Asíncrona:</strong> Diseñó enlaces funcionales de preservación de estado para sincronizar automáticamente los estados de almacenamiento local y actualizar los diseños del panel dinámicamente según los eventos de seguimiento."></li>
-                            <li data-en="<strong>Dynamic Animations:</strong> Integrated real-time interaction feedback loops utilizing CSS3 <code>@keyframes</code> pulse triggers to flag aging accounts and lifecycle constraints."
-                                data-es="<strong>Animaciones Dinámicas:</strong> Integró bucles de retroalimentación de interacción en tiempo real utilizando activadores de pulso <code>@keyframes</code> de CSS3 para marcar cuentas antiguas y restricciones de ciclo de vida."></li>
-                            <li data-en="<strong>Data Handling & Fallbacks:</strong> Developed structured JSON file-system importers and string execution pipelines using vanilla HTML5 FileReader APIs to safeguard cross-system data updates without external server overhead."
-                                data-es="<strong>Manipulación de Datos y Alternativas:</strong> Desarrolló importadores de sistemas de archivos JSON estructurados y canalizaciones de ejecución de cadenas utilizando APIs FileReader de HTML5 nativo para salvaguardar las actualizaciones de datos entre sistemas sin sobrecarga de servidores externos."></li>
-                        </ul>
-                    </article>
-
-                    <article class="job-card" style="border-top: 3px solid #3b82f6;">
-                        <div class="job-header">
-                            <div>
-                                <span class="job-title" data-en="Applied AI & Automated Workflow Engineering" data-es="IA Aplicada e Ingeniería de Flujos de Trabajo Automatizados">Applied AI & Automated Workflow Engineering</span><br>
-                                <span class="job-company" data-en="Self-Directed Systems Integration Portfolio" data-es="Portafolio de Integración de Sistemas Autodirigido">Self-Directed Systems Integration Portfolio</span>
-                            </div>
-                            <span class="job-date" data-en="Continuous Innovation" data-es="Innovación Continua">Continuous Innovation</span>
-                        </div>
-                        <ul class="job-bullets">
-                            <li data-en="<strong>Prompt Engineering & Logic Automation:</strong> Investigate and build localized automation scripts combining Large Language Model capabilities with operational flows to parse data structures, optimize manual categorization, and eliminate administrative latency."
-                                data-es="<strong>Ingeniería de Prompts y Automatización de Lógica:</strong> Investiga y construye scripts de automatización localizados que combinan capacidades de Modelos de Lenguaje Grande con flujos operativos para analizar estructuras de datos, optimizar la categorización manual y eliminar la latencia administrativa."></li>
-                            <li data-en="<strong>Outside-the-Box Solutions:</strong> Combine modern front-end web paradigms with custom algorithmic automation models to create performant, cost-free technical alternatives that solve real-world industry friction points."
-                                data-es="<strong>Soluciones Fuera de lo Común:</strong> Combina paradigmas web front-end modernos con modelos de automatización algorítmica personalizados para crear alternativas técnicas eficientes y sin costo que resuelven puntos de fricción reales de la industria."></li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section aria-labelledby="experience-title">
-                    <h2 id="experience-title" data-en="Work History" data-es="Historial Laboral">Work History</h2>
-
-                    <article class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <span class="job-title" data-en="Technical Solutions Consultant (Sales Enablement)" data-es="Consultor de Soluciones Técnicas (Habilitación de Ventas)">Technical Solutions Consultant (Sales Enablement)</span><br>
-                                <span class="job-company">Canon Canada Inc., Brampton, ON</span>
-                            </div>
-                            <span class="job-date" data-en="03/2023 to Current" data-es="03/2023 al Presente">03/2023 to Current</span>
-                        </div>
-                        <ul class="job-bullets">
-                            <li data-en="<strong>Subject Matter Expert (SME):</strong> Serve as the principal technical authority, structural integration engineer, and platform advisor across high-value business scanner lines and enterprise business/small office printers. Dedicated hours to self-training on deep technical specifications to master unique competitive advantages."
-                                data-es="<strong>Experto en la Materia (SME):</strong> Sirve como la principal autoridad técnica, ingeniero de integración estructural y asesor de plataformas en líneas de escáneres comerciales de alto valor e impresoras para empresas y pequeñas oficinas. Dedicó horas a la autoformación en especificaciones técnicas profundas para dominar ventajas competitivas únicas."></li>
-                            <li data-en="<strong>Sales Acceleration & Enablement:</strong> Partner closely with dealer channel networks and Sales Enablement units to audit prospective client environments, analyze complex document workflows, and propose tailored technology configurations that remove runtime latency and drive strategic asset sales."
-                                data-es="<strong>Aceleración y Habilitación de Ventas:</strong> Colabora estrechamente con las redes de canales de distribución y las unidades de Habilitación de Ventas para auditar los entornos de clientes potenciales, analizar flujos de trabajo de documentos complejos y proponer configuraciones tecnológicas a la medida que eliminen la latencia de ejecución y potencien las ventas de activos estratégicos."></li>
-                            <li data-en="<strong>Advanced Technical Operations & Diagnostics:</strong> Deliver rapid-response tier-3 engineering and diagnostic troubleshooting directly to clients facing critical integration friction, application compatibility hurdles, or installed hardware configuration issues."
-                                data-es="<strong>Operaciones Técnicas Avanzadas y Diagnósticos:</strong> Ofrece ingeniería de nivel 3 de respuesta rápida y resolución de problemas de diagnóstico directamente a los clientes que enfrentan fricciones críticas de integración, obstáculos de compatibilidad de aplicaciones o problemas de configuración de hardware instalado."></li>
-                            <li data-en="<strong>Value Demonstration & Pipeline Conversion:</strong> Successfully gain client trust, secure technology acceptance, and accelerate pipeline closure by building clear financial models that demonstrate measurable cost reductions and concrete operational improvements."
-                                data-es="<strong>Demostración de Valor y Conversión de Prospectos:</strong> Gana con éxito la confianza del cliente, asegura la aceptación de la tecnología y acelera el cierre de oportunidades comerciales mediante la creación de modelos financieros claros que demuestran reducciones de costos medibles y mejoras operativas concretas."></li>
-                            <li data-en="<strong>Global Feedback Loop:</strong> Consolidate field telemetry data, user observations, and real-world software/hardware interaction roadblocks to deliver structured engineering enhancements directly to global product development teams."
-                                data-es="<strong>Bucle de Retroalimentación Global:</strong> Consolida los datos de telemetría de campo, las observaciones de los usuarios y los obstáculos de interacción del mundo real entre software y hardware para entregar mejoras de ingeniería estructuradas directamente a los equipos globales de desarrollo de productos."></li>
-                        </ul>
-                    </article>
-
-                    <article class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <span class="job-title" data-en="Client Technology Specialist" data-es="Especialista en Tecnología del Cliente">Client Technology Specialist</span><br>
-                                <span class="job-company">Canon Canada Inc.</span>
-                            </div>
-                            <span class="job-date" data-en="08/2009 to 02/2023" data-es="08/2009 al 02/2023">08/2009 to 02/2023</span>
-                        </div>
-                        <ul class="job-bullets">
-                            <li data-en="<strong>Executive Tier Technical Support:</strong> Commanded dedicated technical hardware and software operations across the corporate layout, delivering immediate, zero-downtime solutions to C-suite executives and enterprise leadership."
-                                data-es="<strong>Soporte Técnico de Nivel Ejecutivo:</strong> Dirigió operaciones técnicas dedicadas de hardware y software en todo el entorno corporativo, brindando soluciones inmediatas y sin tiempo de inactividad a ejecutivos de la alta dirección y líderes empresariales."></li>
-                            <li data-en="<strong>Enterprise Mobility Management (EMM):</strong> Acted as the core platform owner for secure configuration, global provisioning, and continuous deployment of over 400 enterprise assets leveraging Microsoft Intune and VMware Workspace One. Implemented app-based compliance policies that dramatically lowered corporate data expenses."
-                                data-es="<strong>Gestión de Movilidad Empresarial (EMM):</strong> Actuó como propietario de la plataforma central para la configuración segura, el aprovisionamiento global y la implementación continua de más de 400 activos empresariales aprovechando Microsoft Intune y VMware Workspace One. Implementó políticas de cumplimiento basadas en aplicaciones que redujeron drásticamente los gastos de datos corporativos."></li>
-                            <li data-en="<strong>Multisite Infrastructure Operations:</strong> Commanded infrastructure lifecycle support and continuous operational availability across 3 critical national distribution warehouses, keeping PC hardware, operating standards, and mobile terminal scanners online."
-                                data-es="<strong>Operaciones de Infraestructura Multisitio:</strong> Dirigió el soporte del ciclo de vida de la infraestructura y la disponibilidad operativa continua en 3 almacenes de distribución nacional críticos, manteniendo en línea el hardware de PC, los estándares operativos y los escáneres de terminales móviles."></li>
-                            <li data-en="<strong>Knowledge Management Architecture:</strong> Researched, authored, and maintained a centralized technical knowledgebase base used internally by enterprise IT and externally by third-party support networks in the United States."
-                                data-es="<strong>Arquitectura de Gestión del Conocimiento:</strong> Investigó, redactó y mantuvo una base de conocimientos técnica centralizada utilizada internamente por el departamento de TI de la empresa y externamente por redes de soporte de terceros en los Estados Unidos."></li>
-                            <li data-en="<strong>Resource Optimization:</strong> Deployed creative hardware modifications and technical configuration adjustments to address recurring environment alerts, driving cost reductions without dropping performance metrics. Managed end-user expectations via the HP Project Portfolio Management Center (PPM) ticketing architecture."
-                                data-es="<strong>Optimización de Recursos:</strong> Desplegó modificaciones creativas de hardware y ajustes de configuración técnica para abordar alertas recurrentes del entorno, impulsando la reducción de costos sin disminuir las métricas de rendimiento. Gestionó las expectativas de los usuarios finales a través de la arquitectura de tickets de HP Project Portfolio Management Center (PPM)."></li>
-                        </ul>
-                    </article>
-
-                    <article class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <span class="job-title" data-en="Training & Knowledge Management Specialist" data-es="Especialista en Capacitación y Gestión del Conocimiento">Training & Knowledge Management Specialist</span><br>
-                                <span class="job-company">Siemens Business Services</span>
-                            </div>
-                            <span class="job-date" data-en="09/2005 to 06/2009" data-es="09/2005 al 06/2009">09/2005 to 06/2009</span>
-                        </div>
-                        <ul class="job-bullets">
-                            <li data-en="<strong>Onboarding Curriculums:</strong> Designed, iterated, and adapted agile training frameworks to rapidly transform fresh talent into high-performing professionals in high-velocity service desk environments."
-                                data-es="<strong>Planes de Estudio de Integración:</strong> Diseñó, reiteró y adaptó marcos de capacitación ágiles para transformar rápidamente el nuevo talento en profesionales de alto rendimiento en entornos de mesa de servicio de alta velocidad."></li>
-                            <li data-en="<strong>International Operations Prototyping:</strong> Chosen to head corporate operations scaling into the Philippines, directing on-site training pipelines for 50 international technical staff on core account processes and platform environments."
-                                data-es="<strong>Prototipado de Operaciones Internacionales:</strong> Elegido para dirigir la expansión de operaciones corporativas en Filipinas, coordinando flujos de capacitación en el sitio para 50 colaboradores técnicos internacionales sobre los procesos centrales de las cuentas y los entornos de la plataforma."></li>
-                            <li data-en="<strong>Technical Content Engineering:</strong> Engineered comprehensive training documentation, operational playbooks, and systems layouts covering Active Directory user management, complex secure VPN tunnels, and enterprise communication suites."
-                                data-es="<strong>Ingeniería de Contenido Técnico:</strong> Diseñó documentación de capacitación integral, manuales operativos y diagramas de sistemas que abarcaban la gestión de usuarios de Active Directory, túneles VPN seguros complejos y suites de comunicación empresarial."></li>
-                        </ul>
-                    </article>
-                </section>
-
-            </main>
-
-            <aside aria-label="Expertise Matrix and Credentials">
-                
-                <section aria-labelledby="skills-title">
-                    <h2 id="skills-title" data-en="Expertise" data-es="Conocimientos">Expertise</h2>
+    <div class="modal-overlay" id="opportunity-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Onboard New Sales Opportunity File Entry</h2>
+                <button type="button" class="btn btn-danger" id="btn-close-modal" aria-label="Close Dialog Window Modal Framework layer element">✕</button>
+            </div>
+            <form id="opportunity-form">
+                <div class="modal-body">
+                    <input type="hidden" id="form-opportunity-uid">
                     
-                    <div class="skills-group">
-                        <h3 data-en="Hardware Expert Portfolios" data-es="Portafolio de Hardware Experto">Hardware Expert Portfolios</h3>
-                        <div class="skills-tags">
-                            <span class="tag" style="background-color: #cbd5e1; color: #1e3a8a; font-weight: 700;" data-en="Business Scanners" data-es="Escáneres Comerciales">Business Scanners</span>
-                            <span class="tag" style="background-color: #cbd5e1; color: #1e3a8a; font-weight: 700;" data-en="Business Printers" data-es="Impresoras Comerciales">Business Printers</span>
-                            <span class="tag" data-en="Mobile Scanner Terminals" data-es="Terminales de Escáner Móvil">Mobile Scanner Terminals</span>
-                            <span class="tag" data-en="PC Hardware Maintenance" data-es="Mantenimiento de Hardware de PC">PC Hardware Maintenance</span>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="input-comp-name">Company Name *</label>
+                            <input type="text" id="input-comp-name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-proj-title">Project Name/Objective *</label>
+                            <input type="text" id="input-proj-title" class="form-control" required>
                         </div>
                     </div>
 
-                    <div class="skills-group">
-                        <h3 data-en="Full-Stack Web Stack" data-es="Tecnologías Web Full-Stack">Full-Stack Web Stack</h3>
-                        <div class="skills-tags">
-                            <span class="tag">HTML5 / DOM API</span>
-                            <span class="tag">CSS3 / Responsive Grid</span>
-                            <span class="tag">JavaScript (ES6+)</span>
-                            <span class="tag">JSON / Data Mapping</span>
-                            <span class="tag">State Management</span>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="input-approx-value">Approximate Value (CAD) *</label>
+                            <input type="number" id="input-approx-value" class="form-control" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-pipeline-stage">Current Stage *</label>
+                            <select id="input-pipeline-stage" class="form-control" required>
+                                <option value="Lead Development">Lead Development</option>
+                                <option value="Discovery">Discovery</option>
+                                <option value="Proposal Draft">Proposal Draft</option>
+                                <option value="Negotiation">Negotiation</option>
+                                <option value="Closed Won">Closed Won</option>
+                                <option value="Closed Lost">Closed Lost</option>
+                            </select>
                         </div>
                     </div>
 
-                    <div class="skills-group">
-                        <h3 data-en="Enterprise Mobility & Security" data-es="Movilidad y Seguridad Empresarial">Enterprise Mobility & Security</h3>
-                        <div class="skills-tags">
-                            <span class="tag">Microsoft Intune</span>
-                            <span class="tag">Workspace One</span>
-                            <span class="tag">Apple Business Manager</span>
-                            <span class="tag">Azure AD / Entra ID</span>
-                            <span class="tag">Active Directory</span>
-                            <span class="tag">iOS / Android / Mac OS</span>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="input-account-type">Customer Type *</label>
+                            <select id="input-account-type" class="form-control" required>
+                                <option value="New Customer">New Customer</option>
+                                <option value="Base Customer">Base Customer</option>
+                                <option value="Competitive KO">Competitive KO</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-channel-origin">Sales Channel *</label>
+                            <select id="input-channel-origin" class="form-control" required>
+                                <option value="Direct Sales">Direct Sales</option>
+                                <option value="Dealer Channel">Dealer Channel</option>
+                                <option value="Distribution">Distribution</option>
+                            </select>
                         </div>
                     </div>
-                </section>
 
-                <section aria-labelledby="certs-title">
-                    <h2 id="certs-title" data-en="Certifications" data-es="Certificaciones">Certifications</h2>
-                    <div class="job-card" style="margin-bottom: 0; padding: 1.25rem;">
-                        <strong style="color: var(--text-primary); font-size: 1rem;">ITIL Foundations 4</strong>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.15rem; font-weight: 600;" data-en="Issued Sept 2020" data-es="Emitido en Sept 2020">Issued Sept 2020</p>
-                    </div>
-                </section>
-
-                <section aria-labelledby="edu-title" style="margin-top: 3rem;">
-                    <h2 id="edu-title" data-en="Education" data-es="Educación">Education</h2>
-                    <div style="font-size: 0.95rem; margin-bottom: 1.25rem;">
-                        <strong style="color: var(--text-primary);" data-en="Network Engineering Studies" data-es="Estudios de Ingeniería de Redes">Network Engineering Studies</strong><br>
-                        <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Xintra Computer College, Mississauga, ON</span>
-                    </div>
-                    <div style="font-size: 0.95rem;">
-                        <strong style="color: var(--text-primary);" data-en="High School Diploma" data-es="Diploma de Escuela Secundaria">High School Diploma</strong><br>
-                        <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;">Michael Power St. Joseph HS, Toronto, ON</span>
-                    </div>
-                </section>
-
-                <section aria-labelledby="social-title" style="margin-top: 3rem;">
-                    <h2 id="social-title" data-en="Networks" data-es="Redes">Networks</h2>
-                    <a href="https://www.linkedin.com/in/manuel-orellana-41538012/" target="_blank" rel="noopener noreferrer" class="linkedin-badge-btn">
-                        <svg style="width:16px; height:16px; fill:currentColor;" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        <span data-en="Connect on LinkedIn" data-es="Conectar en LinkedIn">Connect on LinkedIn</span>
-                    </a>
-
-                    <div class="carousel-wrapper" data-en-title="Click card to verify recommendations on LinkedIn" data-es-title="Haga clic para verificar las recomendaciones en LinkedIn">
-                        <div class="carousel-track">
-                            
-                            <a href="https://www.linkedin.com/in/manuel-orellana-41538012/" target="_blank" rel="noopener noreferrer" class="carousel-item active">
-                                <p class="recommendation-text" 
-                                   data-en='"Manuel possesses an exceptional ability to unravel intricate technological problems and explain them seamlessly. His leadership on enterprise device migrations saved us hundreds of testing hours."'
-                                   data-es='"Manuel posee una capacidad excepcional para resolver problemas tecnológicos complejos y explicarlos con total fluidez. Su liderazgo en las migraciones de dispositivos empresariales nos ahorró cientos de horas de pruebas."'>
-                                   "Manuel possesses an exceptional ability to unravel intricate technological problems and explain them seamlessly. His leadership on enterprise device migrations saved us hundreds of testing hours."
-                                </p>
-                                <span class="recommendation-author" data-en="Senior Infrastructure Manager" data-es="Gerente Senior de Infraestructura">Senior Infrastructure Manager</span>
-                                <span class="recommendation-title" data-en="Corporate Logistics Matrix" data-es="Matriz de Logística Corporativa">Corporate Logistics Matrix</span>
-                            </a>
-
-                            <a href="https://www.linkedin.com/in/manuel-orellana-41538012/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                                <p class="recommendation-text"
-                                   data-en='"An outside-the-box thinker who builds custom tools to solve everyday work friction. Manuel&#039;s dedication to hardware solutions integration makes him an authority in his space."'
-                                   data-es='"Un pensador creativo fuera de lo común que desarrolla herramientas personalizadas para resolver las fricciones laborales diarias. La dedicación de Manuel a la integración de soluciones de hardware lo convierte en una autoridad en su área."'>
-                                   "An outside-the-box thinker who builds custom tools to solve everyday work friction. Manuel's dedication to hardware solutions integration makes him an authority in his space."
-                                </p>
-                                <span class="recommendation-author" data-en="Enterprise Sales Lead" data-es="Líder de Ventas Empresariales">Enterprise Sales Lead</span>
-                                <span class="recommendation-title" data-en="Dealer Channels Sector" data-es="Sector de Canales de Distribución">Dealer Channels Sector</span>
-                            </a>
-
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="input-contribution">Contribution *</label>
+                            <select id="input-contribution" class="form-control" required>
+                                <option value="In-Person Demo">In-Person Demo</option>
+                                <option value="Printed Samples">Printed Samples</option>
+                                <option value="Technical Analysis">Technical Analysis</option>
+                                <option value="On-Site Visit">On-Site Visit</option>
+                            </select>
                         </div>
+                    </div>
 
-                        <div class="carousel-controls">
-                            <button type="button" class="carousel-btn" onclick="shiftCarouselSlide(-1)"><span data-en="◂ Prev" data-es="◂ Ant">◂ Prev</span></button>
-                            <div class="carousel-indicators" id="carousel-dots-tray">
-                                <div class="indicator-dot active"></div>
-                                <div class="indicator-dot"></div>
+                    <div id="wrapper-dealer-channel" class="fieldset-nested hidden-field-block">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="input-dealer-name">Dealer Name *</label>
+                                <input type="text" id="input-dealer-name" class="form-control">
                             </div>
-                            <button type="button" class="carousel-btn" onclick="shiftCarouselSlide(1)"><span data-en="Next ▸" data-es="Sig ▸">Next ▸</span></button>
+                            <div class="form-group">
+                                <label for="input-dealer-rep">Sales Representative *</label>
+                                <select id="input-dealer-rep" class="form-control">
+                                    <option value="Imran Amil">Imran Amil</option>
+                                    <option value="Walid Boussa">Walid Boussa</option>
+                                    <option value="John Sopinka">John Sopinka</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </section>
 
-                <section aria-labelledby="contact-form-title" style="margin-top: 3rem;">
-                    <h2 id="contact-form-title" data-en="Contact Me" data-es="Contáctame">Contact Me</h2>
-                    <form id="portfolio-contact-form" onsubmit="handleFormSubmission(event)" style="background: var(--card-bg); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-slate); box-shadow: 0 4px 6px rgba(15, 23, 42, 0.02);">
-                        
+                    <div id="wrapper-distribution-channel" class="fieldset-nested hidden-field-block">
                         <div class="form-group">
-                            <label for="contact-name" data-en="Full Name *" data-es="Nombre Completo *">Full Name *</label>
-                            <input type="text" id="contact-name" class="form-control" placeholder="Jane Doe" required>
+                            <label for="input-distribution-rep">Assigned Distribution Account Specialist Representative Owner</label>
+                            <input type="text" id="input-distribution-rep" class="form-control" value="Gerson Vijayan" readonly>
                         </div>
+                    </div>
 
+                    <div id="wrapper-direct-channel" class="fieldset-nested hidden-field-block">
                         <div class="form-group">
-                            <label for="contact-company" data-en="Company Name" data-es="Nombre de la Empresa">Company Name</label>
-                            <input type="text" id="contact-company" class="form-control" placeholder="Enterprise Inc.">
+                            <label for="input-direct-rep">Assigned Sales Rep *</label>
+                            <input type="text" id="input-direct-rep" class="form-control">
                         </div>
+                    </div>
 
+                    <div class="fieldset-nested">
+                        <legend>Proposed Hardware</legend>
+                        <div class="product-pitch-row">
+                            <select id="input-product-1" class="form-control product-dropdown-menu-list"></select>
+                            <input type="number" id="input-qty-1" class="form-control" min="0" value="0">
+                        </div>
+                        <div class="product-pitch-row">
+                            <select id="input-product-2" class="form-control product-dropdown-menu-list"></select>
+                            <input type="number" id="input-qty-2" class="form-control" min="0" value="0">
+                        </div>
+                        <div class="product-pitch-row">
+                            <select id="input-product-3" class="form-control product-dropdown-menu-list"></select>
+                            <input type="number" id="input-qty-3" class="form-control" min="0" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
                         <div class="form-group">
-                            <label for="contact-comments" data-en="Comments / Inquiries *" data-es="Comentarios / Preguntas *">Comments / Inquiries *</label>
-                            <textarea id="contact-comments" class="form-control" placeholder="Let's discuss an upcoming integration opportunity..." required></textarea>
+                            <label for="input-creation-date">First Entry *</label>
+                            <input type="date" id="input-creation-date" class="form-control" required>
                         </div>
-
-                        <div class="form-actions">
-                            <button type="button" class="btn btn-clear" onclick="clearFormInputs()" data-en="Clear" data-es="Limpiar">Clear</button>
-                            <button type="submit" class="btn btn-submit" data-en="Submit" data-es="Enviar">Submit</button>
+                        <div class="form-group">
+                            <label for="input-target-close">Projected Close Date *</label>
+                            <input type="date" id="input-target-close" class="form-control" required>
                         </div>
-                    </form>
-                </section>
+                    </div>
 
-            </aside>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label for="input-next-action">Next Action</label>
+                            <input type="date" id="input-next-action" class="form-control">
+                        </div>
+                    </div>
 
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="input-initial-notes">Additional Notes</label>
+                        <textarea id="input-initial-notes" class="form-control" rows="3" placeholder="Describe deployment constraints, competitive stance context logs..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-form">Cancel Entry</button>
+                    <button type="submit" class="btn btn-primary">Commit Opportunity Record Data</button>
+                </div>
+            </form>
         </div>
-
-        <footer>
-            <p>&copy; 2026 Manuel Orellana</p>
-        </footer>
-
     </div>
 
     <script>
-        /* Localization Processing Script Engine */
-        function setGlobalAppLanguage(targetLanguage) {
-            // Persist preference to browser cache
-            localStorage.setItem('preferredPortfolioLang', targetLanguage);
-            
-            // Toggle active styling states on buttons
-            document.getElementById('btn-lang-en').classList.toggle('active', targetLanguage === 'en');
-            document.getElementById('btn-lang-es').classList.toggle('active', targetLanguage === 'es');
-            
-            // Query all localizable nodes containing text arrays
-            const localizableElements = document.querySelectorAll('[data-en], [data-es]');
-            
-            localizableElements.forEach(element => {
-                const targetTextContent = element.getAttribute(`data-${targetLanguage}`);
-                if (targetTextContent !== null && targetTextContent !== '') {
-                    element.innerHTML = targetTextContent;
-                }
-            });
+        // Global Product Array Definition Object Matrix Lookups Mapping Repository Data Source
+        const PRODUCT_MASTER_CATALOG = [
+            { sku: "9704B007", name: "P-208 II Mobile Document Scanner" },
+            { sku: "9705B007", name: "P-215 II Mobile Document Scanner" },
+            { sku: "3258C002", name: "DR-C225 II Space-Saving Scanner" },
+            { sku: "7291C002", name: "DR-C340 Office Document Scanner" },
+            { sku: "7290C002", name: "DR-C350 Office Document Scanner" },
+            { sku: "0651C002", name: "DR-C240 Desktop Document Scanner" },
+            { sku: "6383C002", name: "DR-S250N Ethernet Office Scanner" },
+            { sku: "6897C002", name: "DR-S350NW Wi-Fi Office Scanner" },
+            { sku: "2152C002", name: "Flatbed A4 Flatbed-102" },
+            { sku: "6050C002", name: "DR-M140II Departmental Scanner" },
+            { sku: "2405C002", name: "DR-M260 Departmental Scanner" },
+            { sku: "6049C002", name: "DR-M1060II Wide-Format A3 Scanner" },
+            { sku: "1255C002", name: "ScanFront 400 Touchscreen Network" },
+            { sku: "3151C002", name: "DR-G2090 USB Production-Class" },
+            { sku: "3150C002", name: "DR-G2110 High-Volume Production" },
+            { sku: "3149C002", name: "DR-G2140 High-Speed Production" },
+            { sku: "5031C002", name: "Flatbed A3 Flatbed-202" },
+            { sku: "2260C001", name: "DR-X10C II Archival Production Scanner" },
+            { sku: "2260C002", name: "DR-X10C Heavy-Duty Production Scanner" },
+            { sku: "3595C002", name: "CR-L1 Retail Teller Cheque Scanner" },
+            { sku: "1722C001", name: "CR-120 Teller Terminal Cheque Scanner" },
+            { sku: "2693C001", name: "CR-120N Direct Network Cheque Scanner" },
+            { sku: "1721C001", name: "CR-150 Back-Counter Cheque Scanner" },
+            { sku: "1009C002", name: "CR-190i II High-Speed Batch Cheque" },
+            { sku: "61448002", name: "Exchange Roller Kit for P-215" },
+            { sku: "80288001", name: "Separation Pad for P-208" },
+            { sku: "80288003", name: "Soft Carrying Case for P-208" },
+            { sku: "3515C003", name: "imageCLASS LBP325dn Mono Desktop SFP" },
+            { sku: "3515C003", name: "imageCLASS X LBP1440 Mono Desktop SFP" },
+            { sku: "5951C001", name: "imageCLASS X MF1440 Mono Desktop MFP" },
+            { sku: "5456C002", name: "imageCLASS X LBP1333C Colour Desktop SFP" },
+            { sku: "5455C003", name: "imageCLASS X MF1333C Compact Desktop Colour MFP" },
+            { sku: "6173C001", name: "imageCLASS X LBP1538CII Colour Desktop SFP" },
+            { sku: "6162C003", name: "imageCLASS X MF538CII Compact Desktop Colour MFP" },
+            { sku: "5160C002", name: "imageCLASS X MF1643i II Mono Desktop MFP" },
+            { sku: "5160C001", name: "imageCLASS X MF1643iF II Mono Desktop MFP" },
+            { sku: "5644C002", name: "imageCLASS X LBP1861 High-Speed Mono Desktop SFP" },
+            { sku: "5644C001", name: "imageCLASS X LBP1871 High-Speed Mono Desktop SFP" },
+            { sku: "7188C001", name: "imageFORCE 1440F Multi-Function" },
+            { sku: "7187C001", name: "imageFORCE 1440P Single-Function" },
+            { sku: "7060C001AA", name: "imageFORCE 710 Compact Enterprise MFP" },
+            { sku: "7061C001AA", name: "imageFORCE 610 Compact Enterprise MFP" },
+            { sku: "7062C001AA", name: "imageFORCE 520 Compact Enterprise MFP" },
+            { sku: "6614C002AA", name: "imageFORCE 6170 Heavy Production" },
+            { sku: "6615C002AA", name: "imageFORCE 6160 High-Volume Color" },
+            { sku: "6616C002AA", name: "imageFORCE 6155 Enterprise Print System" },
+            { sku: "6987C002AA", name: "imageFORCE 8186 Monochromatic MFP" },
+            { sku: "6986C002AA", name: "imageFORCE 8195 High-Performance Mono" },
+            { sku: "6985C002AA", name: "imageFORCE 8105 Production System" },
+            { sku: "7185C004", name: "imageFORCE C1333F Compact Desktop Color MFP" },
+            { sku: "7186C002", name: "imageFORCE C1333P Compact Desktop Color SFP" },
+            { sku: "7074C002AA", name: "imageFORCE C611 Compact Enterprise Colour MFP" },
+            { sku: "7075C002AA", name: "imageFORCE C521 Compact Enterprise Colour MFP" },
+            { sku: "7076C002AA", name: "imageFORCE C431 Compact Enterprise Colour MFP" },
+            { sku: "7077C002AA", name: "imageFORCE C331 Compact Enterprise Colour MFP" },
+            { sku: "7199C003AA", name: "imageFORCE C3150 Enterprise Colour MFP" },
+            { sku: "6377C002AA", name: "imageFORCE C5140 Enterprise Colour MFP" },
+            { sku: "6613C002AA", name: "imageFORCE C5150 Enterprise Colour MFP" },
+            { sku: "6612C002AA", name: "imageFORCE C5160 Enterprise Colour MFP" },
+            { sku: "6611C002AA", name: "imageFORCE C5170 Enterprise Colour MFP" },
+            { sku: "6382C002AA", name: "imageFORCE C7165 Enterprise Colour MFP" },
+            { sku: "5972C002AA", name: "imageRUNNER ADVANCE DX 4925i" },
+            { sku: "5971C002AA", name: "imageRUNNER ADVANCE DX 4935i" },
+            { sku: "5970C002AA", name: "imageRUNNER ADVANCE DX 4945i" },
+            { sku: "5963C002AA", name: "imageRUNNER ADVANCE DX C3926i" },
+            { sku: "5962C002AA", name: "imageRUNNER ADVANCE DX C3930i" },
+            { sku: "5961C002AA", name: "imageRUNNER ADVANCE DX C3935i" },
+            { sku: "9054B002", name: "CX-G2400 High-Speed Card & Badge Printer" },
+            { sku: "1749C002", name: "CX-G6400 Color Card Printer" },
+            { sku: "3189C002", name: "IX-R7000 Card Printer" }
+        ];
 
-            // Query components containing complex layout title attributes 
-            const interactiveTitleElements = document.querySelectorAll('[data-en-title], [data-es-title]');
-            interactiveTitleElements.forEach(element => {
-                const targetTitleContent = element.getAttribute(`data-${targetLanguage}-title`);
-                if (targetTitleContent) {
-                    element.setAttribute('title', targetTitleContent);
-                }
-            });
-        }
+        // Central Client App State Registry Repository Instance Object Storage
+        let dataStore = { opportunities: [] };
+        let activeSelectedOpportunityUid = null;
 
-        // Initialize translation configuration upon UI load execution
-        document.addEventListener('DOMContentLoaded', () => {
-            const cachedLanguageSelection = localStorage.getItem('preferredPortfolioLang') || 'en';
-            setGlobalAppLanguage(cachedLanguageSelection);
+        // Initialize Application Context
+        document.addEventListener("DOMContentLoaded", () => {
+            loadLocalStorageData();
+            buildFormProductDropdownMenus();
+            registerDOMEventHandlers();
+            calculateAndRenderPipelineUI();
         });
 
-        /* Carousel Component State Controller */
-        let activeCarouselIndex = 0;
-        const carouselSlides = document.querySelectorAll('.carousel-item');
-        const indicatorDots = document.querySelectorAll('.indicator-dot');
-        let autoScrollTimerInstance = setInterval(() => shiftCarouselSlide(1), 5000);
-
-        function updateCarouselUILayout() {
-            carouselSlides.forEach((slide, idx) => {
-                if(idx === activeCarouselIndex) {
-                    slide.classList.add('active');
-                    if (indicatorDots[idx]) indicatorDots[idx].classList.add('active');
-                } else {
-                    slide.classList.remove('active');
-                    if (indicatorDots[idx]) indicatorDots[idx].classList.remove('active');
+        // Load Persistent Client Storage Matrix Cache State
+        function loadLocalStorageData() {
+            const rawCache = localStorage.getItem("crm_sales_datastore");
+            if (rawCache) {
+                try {
+                    dataStore = JSON.parse(rawCache);
+                    if (!dataStore.opportunities) dataStore.opportunities = [];
+                } catch (e) {
+                    console.error("Local schema validation fault parsing cached client database storage entity. Resetting state.", e);
                 }
+            } else {
+                // Seed baseline testing demo mock records matching functional requirements specifications guidelines
+                dataStore.opportunities = [
+                    {
+                        uid: "OPP-718290",
+                        companyName: "Toronto Hydro Electric Corporation",
+                        projectTitle: "Centralized Digitization Project Phase 2",
+                        approxValue: 84500.00,
+                        pipelineStage: "Discovery",
+                        accountType: "New Customer",
+                        channelOrigin: "Direct Sales",
+                        contribution: "Technical Analysis",
+                        directRepName: "Manuel Orellana",
+                        dealerName: "",
+                        dealerRepName: "",
+                        distributionRepName: "",
+                        productsPitched: [{ sku: "3149C002", qty: 5 }, { sku: "2152C002", qty: 2 }],
+                        creationDate: getPastOffsetISOString(12),
+                        lastModifiedDate: getPastOffsetISOString(2),
+                        targetCloseDate: "2026-09-30",
+                        nextActionDate: "2026-06-15",
+                        notesLog: [
+                            { timestamp: new Date(Date.now() - 10 * 86400000).toISOString(), text: "Initial discovery session completed. Customer requires uncompromised throughput velocity logging criteria bounds." },
+                            { timestamp: new Date(Date.now() - 2 * 86400000).toISOString(), text: "Forwarded scoping framework guidelines sheets architecture parameters metrics matrix." }
+                        ]
+                    },
+                    {
+                        uid: "OPP-302912",
+                        companyName: "Ontario Ministry of Health Logistics",
+                        projectTitle: "Archival Scanning Rollout Project",
+                        approxValue: 245000.00,
+                        pipelineStage: "Proposal Draft",
+                        accountType: "Competitive KO",
+                        channelOrigin: "Dealer Channel",
+                        contribution: "In-Person Demo",
+                        directRepName: "",
+                        dealerName: "Tri-Regional Office Automation Inc.",
+                        dealerRepName: "Walid Boussa",
+                        distributionRepName: "",
+                        productsPitched: [{ sku: "2260C001", qty: 8 }],
+                        creationDate: getPastOffsetISOString(48),
+                        lastModifiedDate: getPastOffsetISOString(1),
+                        targetCloseDate: "2026-08-15",
+                        nextActionDate: "2026-05-25",
+                        notesLog: [
+                            { timestamp: new Date(Date.now() - 45 * 86400000).toISOString(), text: "Onboarded deal pipeline track file records." }
+                        ]
+                    }
+                ];
+                commitStateToLocalStorage();
+            }
+        }
+
+        function commitStateToLocalStorage() {
+            localStorage.setItem("crm_sales_datastore", JSON.stringify(dataStore));
+        }
+
+        function getPastOffsetISOString(daysAgo) {
+            return new Date(Date.now() - (daysAgo * 24 * 60 * 60 * 1000)).toISOString().split('T')[0];
+        }
+
+        // Build HTML Select Controls From Master Product Array Definition Registry Source Matrix
+        function buildFormProductDropdownMenus() {
+            const picklistMenus = document.querySelectorAll(".product-dropdown-menu-list");
+            picklistMenus.forEach(menu => {
+                menu.innerHTML = '<option value="">-- No Product Pitched --</option>';
+                PRODUCT_MASTER_CATALOG.forEach(p => {
+                    const el = document.createElement("option");
+                    el.value = p.sku;
+                    el.textContent = `[${p.sku}] ${p.name}`;
+                    menu.appendChild(el);
+                });
             });
         }
 
-        function shiftCarouselSlide(directionOffset) {
-            clearInterval(autoScrollTimerInstance);
-            activeCarouselIndex += directionOffset;
-            if (activeCarouselIndex >= carouselSlides.length) {
-                activeCarouselIndex = 0;
-            } else if (activeCarouselIndex < 0) {
-                activeCarouselIndex = carouselSlides.length - 1;
+        // Register Complex Application Interface Operational Event Handlers System Framework Matrix
+        function registerDOMEventHandlers() {
+            // Modal Open & Close Triggers Actions Setup
+            document.getElementById("btn-open-create-modal").addEventListener("click", () => showOpportunityModalForm());
+            document.getElementById("btn-close-modal").addEventListener("click", hideOpportunityModalForm);
+            document.getElementById("btn-cancel-form").addEventListener("click", hideOpportunityModalForm);
+
+            // Dynamic Selector Context Input Evaluation Toggles Handling
+            document.getElementById("input-channel-origin").addEventListener("change", (e) => evaluateFormChannelSubsystemViewStates(e.target.value));
+
+            // Core Form Record Pipeline Commission Execution Event Mapping
+            document.getElementById("opportunity-form").addEventListener("submit", executeFormSubmissionRecordPipeline);
+
+            // Global Live Reactive Query Filters Monitoring
+            document.getElementById("filter-search").addEventListener("input", calculateAndRenderPipelineUI);
+            document.getElementById("filter-status-group").addEventListener("change", calculateAndRenderPipelineUI);
+            document.getElementById("filter-pipeline-stage").addEventListener("change", calculateAndRenderPipelineUI);
+            document.getElementById("filter-channel-origin").addEventListener("change", calculateAndRenderPipelineUI);
+            document.getElementById("filter-sales-rep").addEventListener("change", calculateAndRenderPipelineUI);
+
+            // Directly Append Live Inline Dynamic Notes Updates System Execution Track
+            document.getElementById("btn-append-note").addEventListener("click", executeInspectorLiveNoteInsertionTrack);
+
+            // System Database JSON Management Sync Pipelines
+            document.getElementById("btn-export-json").addEventListener("click", exportJSONDatabaseArchive);
+            document.getElementById("btn-trigger-import").addEventListener("click", () => document.getElementById("file-import-json").click());
+            document.getElementById("file-import-json").addEventListener("change", executeImportJSONDatabaseBackupPayload);
+        }
+
+        // Evaluate Dynamic Fieldblock Interface Subsystem Visual Toggles Rules
+        function evaluateFormChannelSubsystemViewStates(selectedChannelType) {
+            const blockDealer = document.getElementById("wrapper-dealer-channel");
+            const blockDist = document.getElementById("wrapper-distribution-channel");
+            const blockDirect = document.getElementById("wrapper-direct-channel");
+
+            blockDealer.classList.add("hidden-field-block");
+            blockDist.classList.add("hidden-field-block");
+            blockDirect.classList.add("hidden-field-block");
+
+            document.getElementById("input-dealer-name").required = false;
+            document.getElementById("input-direct-rep").required = false;
+
+            if (selectedChannelType === "Dealer Channel") {
+                blockDealer.classList.remove("hidden-field-block");
+                document.getElementById("input-dealer-name").required = true;
+            } else if (selectedChannelType === "Distribution") {
+                blockDist.classList.remove("hidden-field-block");
+            } else if (selectedChannelType === "Direct Sales") {
+                blockDirect.classList.remove("hidden-field-block");
+                document.getElementById("input-direct-rep").required = true;
             }
-            updateCarouselUILayout();
-            autoScrollTimerInstance = setInterval(() => shiftCarouselSlide(1), 5000);
         }
 
-        /* Form Controls Controller */
-        function clearFormInputs() {
-            document.getElementById("portfolio-contact-form").reset();
-        }
+        // Show/Hide Modal Dialog Layout Framework Sub-components
+        function showOpportunityModalForm(existingUid = null) {
+            const modal = document.getElementById("opportunity-modal");
+            const form = document.getElementById("opportunity-form");
+            form.reset();
 
-        function handleFormSubmission(event) {
-            event.preventDefault();
-            const clientName = document.getElementById("contact-name").value;
-            const currentLang = localStorage.getItem('preferredPortfolioLang') || 'en';
-            
-            if (currentLang === 'es') {
-                alert(`¡Gracias, ${clientName}! Tu mensaje ha sido simulado con éxito.`);
+            if (existingUid) {
+                document.getElementById("modal-title").textContent = "Modify Active Pipeline Record Entry Matrix Context";
+                const match = dataStore.opportunities.find(o => o.uid === existingUid);
+                if (match) {
+                    document.getElementById("form-opportunity-uid").value = match.uid;
+                    document.getElementById("input-comp-name").value = match.companyName;
+                    document.getElementById("input-proj-title").value = match.projectTitle;
+                    document.getElementById("input-approx-value").value = match.approxValue;
+                    document.getElementById("input-pipeline-stage").value = match.pipelineStage;
+                    document.getElementById("input-account-type").value = match.accountType;
+                    document.getElementById("input-channel-origin").value = match.channelOrigin;
+                    document.getElementById("input-contribution").value = match.contribution || "In-Person Demo";
+
+                    evaluateFormChannelSubsystemViewStates(match.channelOrigin);
+
+                    if (match.channelOrigin === "Dealer Channel") {
+                        document.getElementById("input-dealer-name").value = match.dealerName;
+                        document.getElementById("input-dealer-rep").value = match.dealerRepName;
+                    } else if (match.channelOrigin === "Direct Sales") {
+                        document.getElementById("input-direct-rep").value = match.directRepName;
+                    }
+
+                    // Populate hardware lists allocation entries
+                    for (let i = 1; i <= 3; i++) {
+                        const selectEl = document.getElementById(`input-product-${i}`);
+                        const qtyEl = document.getElementById(`input-qty-${i}`);
+                        if (match.productsPitched && match.productsPitched[i - 1]) {
+                            selectEl.value = match.productsPitched[i - 1].sku;
+                            qtyEl.value = match.productsPitched[i - 1].qty;
+                        } else {
+                            selectEl.value = "";
+                            qtyEl.value = "0";
+                        }
+                    }
+
+                    document.getElementById("input-creation-date").value = match.creationDate;
+                    document.getElementById("input-target-close").value = match.targetCloseDate;
+                    document.getElementById("input-next-action").value = match.nextActionDate || "";
+                    document.getElementById("input-initial-notes").value = "";
+                }
             } else {
-                alert(`Thank you, ${clientName}! Your message has been simulated successfully.`);
+                document.getElementById("modal-title").textContent = "Onboard New Sales Opportunity File Entry";
+                document.getElementById("form-opportunity-uid").value = "";
+                document.getElementById("input-creation-date").value = new Date().toISOString().split('T')[0];
+                evaluateFormChannelSubsystemViewStates("Direct Sales");
+                document.getElementById("input-channel-origin").value = "Direct Sales";
             }
-            clearFormInputs();
+            modal.classList.add("active");
         }
-    </script>
-</body>
-</html>
+
+        function hideOpportunityModalForm() {
+            document.getElementById("opportunity-modal").classList.remove("active");
+        }
+
+        // Commit and execute operational storage data writes from workspace configuration form
+        function executeFormSubmissionRecordPipeline(e) {
+            e.preventDefault();
+
+            const targetUid = document.getElementById("form-opportunity-uid").value;
+            const companyName = document.getElementById("input-comp-name").value.trim();
+            const projectTitle = document.getElementById("input-proj-title").value.trim();
+            const approxValue = parseFloat(document.getElementById("input-approx-value").value) || 0;
+            const pipelineStage = document.getElementById("input-pipeline-stage").value;
+            const accountType = document.getElementById("input-account-type").value;
+            const channelOrigin = document.getElementById("input-channel-origin").value;
+            const contribution = document.getElementById("input-contribution").value;
+            const creationDate = document.getElementById("input-creation-date").value;
+            const targetCloseDate = document.getElementById("input-target-close").value;
+            const nextActionDate = document.getElementById("input-next-action").value;
+            const appendNote = document.getElementById("input-initial-notes").value.trim();
+
+            let dealerName = "";
+            let dealerRepName = "";
+            let directRepName = "";
+            let distributionRepName = "";
+
+            if (channelOrigin === "Dealer Channel") {
+                dealerName = document.getElementById("input-dealer-name").value.trim();
+                dealerRepName = document.getElementById("input-dealer-rep").value;
+            } else if (channelOrigin === "Distribution") {
+                distributionRepName = "Gerson Vijayan";
+            } else if (channelOrigin === "Direct Sales") {
+                directRepName = document.getElementById("input-direct-rep").value.trim();
+            }
+
+            const productsPitched = [];
+            for (let i = 1; i <= 3; i++) {
+                const sku = document.getElementById(`input-product-${i}`).value;
+                const qty = parseInt(document.getElementById(`input-qty-${i}`).value) || 0;
+                if (sku && qty > 0) {
+                    productsPitched.push({ sku, qty });
+                }
+            }
+
+            if (targetUid) {
+                // Update transaction matrix paths records configuration log block properties
+                const match = dataStore.opportunities.find(o => o.uid === targetUid);
+                if (match) {
+                    match.companyName = companyName;
+                    match.projectTitle = projectTitle;
+                    match.approxValue = approxValue;
+                    if (match.pipelineStage !== pipelineStage) {
+                        match.notesLog.push({
+                            timestamp: new Date().toISOString(),
+                            text: `System State Flow Stage alteration automated event: Changed from "${match.pipelineStage}" to "${pipelineStage}".`
+                        });
+                        match.pipelineStage = pipelineStage;
+                    }
+                    match.accountType = accountType;
+                    match.channelOrigin = channelOrigin;
+                    match.contribution = contribution;
+                    match.dealerName = dealerName;
+                    match.dealerRepName = dealerRepName;
+                    match.directRepName = directRepName;
+                    match.distributionRepName = distributionRepName;
+                    match.productsPitched = productsPitched;
+                    match.creationDate = creationDate;
+                    match.targetCloseDate = targetCloseDate;
+                    match.nextActionDate = nextActionDate;
+                    match.lastModifiedDate = new Date().toISOString().split('T')[0];
+
+                    if (appendNote) {
+                        match.notesLog.push({
+                            timestamp: new Date().toISOString(),
+                            text: appendNote
+                        });
+                    }
+                }
+            } else {
+                // Generate secure random context string metrics IDs tracking keys
+                const newUid = "OPP-" + Math.floor(100000 + Math.random() * 900000);
+                const notesLog = [];
+                notesLog.push({
+                    timestamp: new Date().toISOString(),
+                    text: "Onboarded pipeline instance record storage trace block registry structure."
+                });
+                if (appendNote) {
+                    notesLog.push({
+                        timestamp: new Date().toISOString(),
+                        text: appendNote
+                    });
+                }
+
+                dataStore.opportunities.push({
+                    uid: newUid, companyName, projectTitle, approxValue, pipelineStage, accountType,
+                    channelOrigin, contribution, directRepName, dealerName, dealerRepName, distributionRepName,
+                    productsPitched, creationDate, lastModifiedDate: new Date().toISOString().split('T')[0],
+                    targetCloseDate, nextActionDate, notesLog
+                });
+            }
+
+            commitStateToLocalStorage();
+            hideOpportunityModalForm();
+            calculateAndRenderPipelineUI();
+            if (activeSelectedOpportunityUid) renderActiveInspectorContextView(activeSelectedOpportunityUid);
+        }
+
+        // Calculate and Render Complex Pipeline Business Intelligence Core Application Views
+        function calculateAndRenderPipelineUI() {
+            const tableBody = document.getElementById("opportunities-tbody");
+            tableBody.innerHTML = "";
+
+            // Filters input values aggregation parsing variables
+            const searchVal = document.getElementById("filter-search").value.toLowerCase().trim();
+            const filterStatusGroup = document.getElementById("filter-status-group").value;
+            const filterPipelineStage = document.getElementById("filter-pipeline-stage").value;
+            const filterChannelOrigin = document.getElementById("filter-channel-origin").value;
+            const filterSalesRep = document.getElementById("filter-sales-rep").value;
+
+            let activePipelineWorth = 0;
+            let wonDealsCount = 0;
+            let wonDealsWorth = 0;
+
+            const trackingRepsSet = new Set();
+
+            dataStore.opportunities.forEach(o => {
+                // Extract assigned representative identifier label tag
+                let repLabel = "Unassigned";
+                if (o.channelOrigin === "Direct Sales" && o.directRepName) repLabel = o.directRepName;
+                if (o.channelOrigin === "Dealer Channel" && o.dealerRepName) repLabel = o.dealerRepName;
+                if (o.channelOrigin === "Distribution" && o.distributionRepName) repLabel = o.distributionRepName;
+                trackingRepsSet.add(repLabel);
+
+                // Financial aggregation computations logic rules
+                if (o.pipelineStage === "Closed Won") {
+                    wonDealsCount++;
+                    wonDealsWorth += o.approxValue;
+                } else if (o.pipelineStage !== "Closed Lost") {
+                    activePipelineWorth += o.approxValue;
+                }
+
+                // Filtering condition parameters checking evaluation
+                let matchQuery = true;
+
+                if (searchVal) {
+                    if (!o.companyName.toLowerCase().includes(searchVal) && 
+                        !o.projectTitle.toLowerCase().includes(searchVal) && 
+                        !o.uid.toLowerCase().includes(searchVal)) {
+                        matchQuery = false;
+                    }
+                }
+
+                if (filterStatusGroup === "ACTIVE") {
+                    if (o.pipelineStage === "Closed Won" || o.pipelineStage === "Closed Lost") matchQuery = false;
+                } else if (filterStatusGroup === "CLOSED_WON") {
+                    if (o.pipelineStage !== "Closed Won") matchQuery = false;
+                } else if (filterStatusGroup === "CLOSED_LOST") {
+                    if (o.pipelineStage !== "Closed Lost") matchQuery = false;
+                }
+
+                if (filterPipelineStage !== "ALL" && o.pipelineStage !== filterPipelineStage) matchQuery = false;
+                if (filterChannelOrigin !== "ALL" && o.channelOrigin !== filterChannelOrigin) matchQuery = false;
+                if (filterSalesRep !== "ALL" && repLabel !== filterSalesRep) matchQuery = false;
+
+                if (matchQuery) {
+                    const row = document.createElement("tr");
+                    row.className = "clickable-row";
+                    if (activeSelectedOpportunityUid === o.uid) row.classList.add("selected-row");
+
+                    row.addEventListener("click", () => {
+                        highlightSelectedTableRowNodeElement(o.uid);
+                    });
+
+                    // Calculated age calculation logic metrics parameters allocation
+                    const ageInDays = Math.floor((Date.now() - new Date(o.creationDate).getTime()) / (1000 * 60 * 60 * 24)) || 0;
+                    let pulseClass = "age-green";
+                    if (ageInDays > 30) pulseClass = "age-yellow";
+                    if (ageInDays > 60) pulseClass = "age-red";
+                    if (o.pipelineStage === "Closed Won" || o.pipelineStage === "Closed Lost") pulseClass = "age-grey";
+
+                    // Formulate cell nodes components directly output formatting arrays
+                    const cellAge = document.createElement("td");
+                    cellAge.innerHTML = `<span class="age-indicator ${pulseClass}" title="${ageInDays} Days in system funnel workspace"></span><span>${ageInDays}d</span>`;
+                    row.appendChild(cellAge);
+
+                    const cellDesc = document.createElement("td");
+                    cellDesc.innerHTML = `<strong>${escapeHTML(o.companyName)}</strong><br><span style="font-size:0.75rem; color:var(--neutral-dark-3);">${escapeHTML(o.projectTitle)}</span><br><span class="badge" style="font-size:0.65rem; margin-top:4px;">ID: ${o.uid}</span>`;
+                    row.appendChild(cellDesc);
+
+                    const cellVal = document.createElement("td");
+                    cellVal.style.fontWeight = "700";
+                    cellVal.textContent = new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(o.approxValue);
+                    row.appendChild(cellVal);
+
+                    const cellRep = document.createElement("td");
+                    cellRep.textContent = repLabel;
+                    row.appendChild(cellRep);
+
+                    const cellChannel = document.createElement("td");
+                    cellChannel.innerHTML = `<span>${o.channelOrigin}</span>${o.dealerName ? `<br><span style="font-size:0.75rem;color:var(--neutral-dark-3);">${escapeHTML(o.dealerName)}</span>` : ""}`;
+                    row.appendChild(cellChannel);
+
+                    const cellStage = document.createElement("td");
+                    let stageStyle = "";
+                    if (o.pipelineStage === "Closed Won") stageStyle = "background-color:#e8f5e9; color:#2b9348;";
+                    if (o.pipelineStage === "Closed Lost") stageStyle = "background-color:#ffebee; color:#cc0000;";
+                    cellStage.innerHTML = `<span class="badge" style="${stageStyle}">${o.pipelineStage}</span>`;
+                    row.appendChild(cellStage);
+
+                    const cellCust = document.createElement("td");
+                    cellCust.textContent = o.accountType;
+                    row.appendChild(cellCust);
+
+                    const cellDates = document.createElement("td");
+                    cellDates.style.fontSize = "0.75rem";
+                    cellDates.innerHTML = `Target: ${o.targetCloseDate}<br><span style="color:var(--neutral-dark-3);">Next Action: ${o.nextActionDate || "None Set"}</span>`;
+                    row.appendChild(cellDates);
+
+                    const cellActions = document.createElement("td");
+                    cellActions.addEventListener("click", (e) => e.stopPropagation()); // Prevent row activation triggers rules
+                    
+                    const btnModify = document.createElement("button");
+                    btnModify.type = "button";
+                    btnModify.className = "btn btn-secondary";
+                    btnModify.style.padding = "4px 8px";
+                    btnModify.style.fontSize = "0.75rem";
+                    btnModify.textContent = "Modify";
+                    btnModify.addEventListener("click", () => showOpportunityModalForm(o.uid));
+                    cellActions.appendChild(btnModify);
+
+                    const btnRemove = document.createElement("button");
+                    btnRemove.type = "button";
+                    btnRemove.className = "btn btn-danger";
+                    btnRemove.style.marginLeft = "4px";
+                    btnRemove.textContent = "✕";
+                    btnRemove.title = "Delete Record";
+                    btnRemove.addEventListener("click", () => executeRecordPurgeActionPipeline(o.uid));
+                    cellActions.appendChild(btnRemove);
+
+                    row.appendChild(cellActions);
+                    tableBody.appendChild(row);
+                }
+            });
+
+            // Update dynamically generated summary dashboard scorecards values logs data tracking numbers
+            document.getElementById("dashboard-active-pipeline-value").textContent = new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(activePipelineWorth);
+            document.getElementById("dashboard-won-deals-count").textContent = `${wonDealsCount} Records Saved`;
+            document.getElementById("dashboard-won-deals-value").textContent = `${new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(wonDealsWorth)} Total Revenue`;
+
+            // Dynamically manage filter sales representative dropdown values
+            const selectRepFilter = document.getElementById("filter-sales-rep");
+            const previousSelectedValue = selectRepFilter.value;
+            selectRepFilter.innerHTML = '<option value="ALL">All Representatives</option>';
+            Array.from(trackingRepsSet).sort().forEach(repName => {
+                const opt = document.createElement("option");
+                opt.value = repName;
+                opt.textContent = repName;
+                selectRepFilter.appendChild(opt);
+            });
+            if (Array.from(trackingRepsSet).includes(previousSelectedValue)) {
+                selectRepFilter.value = previousSelectedValue;
+            }
+        }
+
+        // Highlight selected row item component logic
+        function highlightSelectedTableRowNodeElement(uid) {
+            activeSelectedOpportunityUid = uid;
+            const rows = document.querySelectorAll("#opportunities-tbody tr");
+            calculateAndRenderPipelineUI();
+            renderActiveInspectorContextView(uid);
+        }
+
+        // Render Active Detailed Record Inside Bottom Layout Inspector view tracking blocks
+        function renderActiveInspectorContextView(uid) {
+            const defaultMsg = document.getElementById("inspector-default-msg");
+            const contentView = document.getElementById("inspector-content-view");
+
+            const match = dataStore.opportunities.find(o => o.uid === uid);
+            if (!match) {
+                activeSelectedOpportunityUid = null;
+                contentView.classList.add("hidden-field-block");
+                defaultMsg.classList.remove("hidden-field-block");
+                document.getElementById("inspect-active-uid").textContent = "No Opportunity Highlighted";
+                return;
+            }
+
+            document.getElementById("inspect-active-uid").textContent = match.uid;
+            defaultMsg.classList.add("hidden-field-block");
+            contentView.classList.remove("hidden-field-block");
+
+            document.getElementById("inspect-comp-name").textContent = match.companyName;
+            document.getElementById("inspect-proj-title").textContent = match.projectTitle;
+            document.getElementById("inspect-account-type").textContent = match.accountType;
+            document.getElementById("inspect-financial-worth").textContent = new Intl.NumberFormat("en-CA", { style: "currency", currency: "CAD" }).format(match.approxValue);
+
+            document.getElementById("inspect-pipeline-stage").textContent = match.pipelineStage;
+            document.getElementById("inspect-channel-origin").textContent = match.channelOrigin;
+            document.getElementById("inspect-partner-context").textContent = match.dealerName ? `${match.dealerName} (Rep: ${match.dealerRepName || "None Set"})` : "N/A - Direct Accounts Operations Block Mapping";
+
+            let assignedRep = "Unassigned";
+            if (match.channelOrigin === "Direct Sales") assignedRep = match.directRepName || "Unassigned";
+            if (match.channelOrigin === "Dealer Channel") assignedRep = match.dealerRepName || "Unassigned";
+            if (match.channelOrigin === "Distribution") assignedRep = match.distributionRepName || "Unassigned";
+            document.getElementById("inspect-assigned-rep").textContent = assignedRep;
+
+            document.getElementById("inspect-creation-date").textContent = match.creationDate;
+            document.getElementById("inspect-modified-date").textContent = match.lastModifiedDate || match.creationDate;
+            document.getElementById("inspect-target-close").textContent = match.targetCloseDate;
+            document.getElementById("inspect-next-action").textContent = match.nextActionDate || "No Action Scheduled Step Logging Configuration Profile Context";
+
+            const existenceAge = Math.floor((Date.now() - new Date(match.creationDate).getTime()) / (1000 * 60 * 60 * 24)) || 0;
+            document.getElementById("inspect-calculated-age").textContent = `${existenceAge} Total Processing Sequence Calendar System Days`;
+
+            // Parse hardware components logs lists parameters
+            const hardwareUl = document.getElementById("inspect-products-list");
+            hardwareUl.innerHTML = "";
+            if (match.productsPitched && match.productsPitched.length > 0) {
+                match.productsPitched.forEach(pitch => {
+                    const lookup = PRODUCT_MASTER_CATALOG.find(p => p.sku === pitch.sku);
+                    const li = document.createElement("li");
+                    li.innerHTML = `<strong>[QTY: ${pitch.qty}]</strong> SKU Code Allocation: <code>${pitch.sku}</code> — Name Specification Mapping: ${lookup ? lookup.name : "Unknown Hardware Product Variant Identification Record"}`;
+                    hardwareUl.appendChild(li);
+                });
+            } else {
+                hardwareUl.innerHTML = '<li style="list-style:none; color:var(--neutral-dark-3); margin-left:-20px;">No proposed hardware models configurations allocated directly to this profile target framework configuration template record file tracking trace.</li>';
+            }
+
+            // Output historical internal notes data logs history
+            const logBox = document.getElementById("inspect-notes-log");
+            logBox.innerHTML = "";
+            if (match.notesLog && match.notesLog.length > 0) {
+                // Display latest notes on top configuration layout strategy orientation
+                [...match.notesLog].reverse().forEach(n => {
+                    const wrapper = document.createElement("div");
+                    wrapper.className = "note-entry";
+                    wrapper.innerHTML = `<span class="note-timestamp">${new Date(n.timestamp).toLocaleString()}</span><p>${escapeHTML(n.text)}</p>`;
+                    logBox.appendChild(wrapper);
+                });
+            } else {
+                logBox.innerHTML = '<div style="font-size:0.8125rem; text-align:center; padding:10px; color:var(--neutral-dark
