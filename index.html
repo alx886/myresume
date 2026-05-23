@@ -54,21 +54,16 @@
     </script>
 
     <style>
-        /* Modern CSS Reset & Variable Definitions */
+        /* Modern Minimalist Light CSS Variable Definitions */
         :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #ef4444; /* Modern Corporate Crimson */
-            --accent-hover: #dc2626;
-            --border: #334155;
+            --text-primary: #1e293b;     /* Deep Slate / Near Black for premium reading */
+            --text-secondary: #475569;   /* Muted Slate for subtitles & details */
+            --accent-corporate: #2563eb; /* Clean Modern Blue for tech alignments */
+            --accent-hover: #1d4ed8;
+            --border-light: #e2e8f0;     /* Elegant, thin dividing rules */
+            --tag-bg: #f1f5f9;           /* Light pill buttons background */
+            --card-bg: rgba(255, 255, 255, 0.75); /* Frosted minimalist glass cards */
             --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            
-            /* Form & Carousel Variable Overrides */
-            --form-input-bg: #0f172a;
-            --form-btn-clear: #475569;
-            --form-btn-clear-hover: #334155;
         }
 
         * {
@@ -78,22 +73,34 @@
         }
 
         body {
-            background-color: var(--bg-primary);
             color: var(--text-primary);
             font-family: var(--font-stack);
             line-height: 1.6;
             padding: 0;
+            min-height: 100vh;
+            
+            /* Modern, Complex Multi-Color Mesh Gradient Background */
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(241, 245, 249, 0.9) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(219, 234, 254, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(248, 250, 252, 0.9) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(254, 243, 199, 0.2) 0px, transparent 50%);
+            background-attachment: fixed;
         }
 
         .skip-link {
             position: absolute;
             top: -40px;
             left: 0;
-            background: var(--accent);
+            background: var(--accent-corporate);
             color: white;
             padding: 8px;
             z-index: 100;
             transition: top 0.2s;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .skip-link:focus {
@@ -104,52 +111,55 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 3rem 2rem;
         }
 
-        /* Grid Framework for Header/Profile */
+        /* Header Layout Framework */
         header {
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
             align-items: center;
             padding-bottom: 3rem;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border-light);
             margin-bottom: 3rem;
         }
 
         @media (min-width: 768px) {
             header {
-                grid-template-columns: 200px 1fr;
+                grid-template-columns: 180px 1fr;
             }
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            /* Framed down perfectly to ensure hair/headshot layout parameters */
             object-position: center 18%; 
-            border: 4px solid var(--border);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
         }
 
         .header-text h1 {
             font-size: 2.5rem;
-            letter-spacing: -0.05em;
-            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 0.25rem;
+            color: #0f172a;
         }
 
         .header-text h1 span {
-            color: var(--accent);
+            color: var(--accent-corporate);
+            font-weight: 400;
         }
 
         .tagline {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             font-weight: 500;
+            letter-spacing: -0.01em;
         }
 
         .contact-info {
@@ -163,18 +173,19 @@
         .contact-info a {
             color: var(--text-primary);
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.2s;
         }
 
         .contact-info a:hover {
-            color: var(--accent);
+            color: var(--accent-corporate);
         }
 
-        /* Main Content Split (2 Column Layout) */
+        /* Main Content Split Component (2 Column Grid Layout) */
         .main-layout {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 3rem;
+            gap: 4rem;
         }
 
         @media (min-width: 992px) {
@@ -188,27 +199,29 @@
         }
 
         h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
+            color: #0f172a;
+            font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         h2::after {
             content: '';
             flex-grow: 1;
             height: 1px;
-            background: var(--border);
+            background: var(--border-light);
         }
 
-        /* Highlights/Accomplishments Callouts */
+        /* Accomplishments Metric Presentation Panels */
         .highlights-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 1.25rem;
             margin-bottom: 2.5rem;
         }
 
@@ -219,26 +232,44 @@
         }
 
         .stat-card {
-            background: var(--bg-secondary);
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             padding: 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid var(--accent);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
         }
 
         .stat-card strong {
             display: block;
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+            color: var(--accent-corporate);
+            margin-bottom: 0.35rem;
+            font-weight: 700;
         }
 
-        /* Work Experience Styling */
+        .stat-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Professional History Node Architecture */
         .job-card {
             margin-bottom: 2.5rem;
-            background: var(--bg-secondary);
-            padding: 1.5rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 1.75rem;
             border-radius: 8px;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
         }
 
         .job-header {
@@ -246,24 +277,32 @@
             justify-content: space-between;
             flex-wrap: wrap;
             align-items: baseline;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            gap: 0.5rem;
         }
 
         .job-title {
-            font-size: 1.3rem;
-            color: var(--text-primary);
+            font-size: 1.25rem;
+            color: #0f172a;
             font-weight: 700;
             letter-spacing: -0.02em;
         }
 
         .job-company {
-            color: var(--accent);
+            color: var(--text-secondary);
             font-weight: 500;
+            font-size: 0.95rem;
+            margin-top: 0.15rem;
+            display: inline-block;
         }
 
         .job-date {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 600;
             color: var(--text-secondary);
+            background: var(--tag-bg);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
         }
 
         .job-bullets {
@@ -273,28 +312,30 @@
         .job-bullets li {
             position: relative;
             padding-left: 1.25rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.85rem;
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
 
         .job-bullets li::before {
-            content: "•";
+            content: "→";
             position: absolute;
             left: 0;
-            color: var(--accent);
+            color: var(--accent-corporate);
             font-weight: bold;
         }
 
-        /* Skills Pill Layout */
+        /* Matrix Tags / Skill Pills */
         .skills-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .skills-group h3 {
-            font-size: 1rem;
-            color: var(--text-primary);
-            margin-bottom: 0.7rem;
+            font-size: 0.9rem;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
         }
 
         .skills-tags {
@@ -304,36 +345,39 @@
         }
 
         .tag {
-            background: var(--bg-secondary);
+            background: var(--tag-bg);
             color: var(--text-secondary);
             padding: 0.35rem 0.75rem;
-            border-radius: 20px;
+            border-radius: 6px;
             font-size: 0.85rem;
-            border: 1px solid var(--border);
+            font-weight: 500;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
         }
 
         .tag:hover {
-            border-color: var(--accent);
+            border-color: #cbd5e1;
+            background-color: #e2e8f0;
             color: var(--text-primary);
         }
 
-        /* LinkedIn Button & Sidebar Styling */
+        /* Sidebar Component Actions & Dynamic Components */
         .linkedin-badge-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: #0077b5; /* Official LinkedIn Blue */
+            background-color: #0077b5; 
             color: #ffffff;
             text-decoration: none;
-            padding: 0.6rem 1.2rem;
+            padding: 0.7rem 1.2rem;
             border-radius: 6px;
             font-size: 0.9rem;
             font-weight: 600;
             transition: background-color 0.2s ease, transform 0.1s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 119, 181, 0.15);
             width: 100%;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .linkedin-badge-btn:hover {
@@ -341,15 +385,18 @@
             transform: translateY(-1px);
         }
 
-        /* Recommendation Carousel Components */
+        /* Testimonial Elements */
         .carousel-wrapper {
             position: relative;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--border-light);
             border-radius: 8px;
-            padding: 1.25rem;
+            padding: 1.5rem;
             overflow: hidden;
-            min-height: 180px;
+            min-height: 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
         }
 
         .carousel-track {
@@ -364,7 +411,7 @@
             width: 100%;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.6s ease, visibility 0.6s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
             display: flex;
             flex-direction: column;
             text-decoration: none;
@@ -381,10 +428,10 @@
             font-style: italic;
             font-size: 0.9rem;
             color: var(--text-secondary);
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
             display: -webkit-box;
-            -webkit-line-clamp: 5; /* Clean truncation to protect sidebar balance */
+            -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -396,21 +443,22 @@
         .recommendation-author {
             font-size: 0.85rem;
             font-weight: 700;
-            color: #0077b5; /* Highlight author name in LinkedIn style */
+            color: #0077b5;
         }
 
         .recommendation-title {
             font-size: 0.75rem;
             color: var(--text-secondary);
+            margin-top: 0.1rem;
         }
 
         .carousel-controls {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 1rem;
-            padding-top: 0.5rem;
-            border-top: 1px dashed var(--border);
+            margin-top: 1.25rem;
+            padding-top: 0.75rem;
+            border-top: 1px dashed var(--border-light);
         }
 
         .carousel-btn {
@@ -418,27 +466,28 @@
             border: none;
             color: var(--text-secondary);
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            font-weight: 600;
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
-            transition: color 0.2s, background-color 0.2s;
+            transition: all 0.2s;
         }
 
         .carousel-btn:hover {
             color: var(--text-primary);
-            background-color: var(--border);
+            background-color: var(--tag-bg);
         }
 
         .carousel-indicators {
             display: flex;
-            gap: 0.35rem;
+            gap: 0.4rem;
         }
 
         .indicator-dot {
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background-color: var(--border);
+            background-color: #cbd5e1;
             transition: background-color 0.2s;
         }
 
@@ -446,63 +495,67 @@
             background-color: #0077b5;
         }
 
-        /* Form Layout Components */
+        /* Minimalist Input Form System */
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 0.35rem;
-            font-weight: 500;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
         }
 
         .form-control {
             width: 100%;
-            background-color: var(--form-input-bg);
-            border: 1px solid var(--border);
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border-light);
             border-radius: 6px;
-            padding: 0.6rem;
+            padding: 0.65rem;
             color: var(--text-primary);
             font-family: var(--font-stack);
             font-size: 0.9rem;
-            transition: border-color 0.2s ease;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--accent);
+            border-color: var(--accent-corporate);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
         }
 
         textarea.form-control {
             resize: vertical;
-            min-height: 90px;
+            min-height: 100px;
         }
 
         .form-actions {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.75rem;
-            margin-top: 1.25rem;
+            margin-top: 1.5rem;
         }
 
         .btn {
             font-family: var(--font-stack);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            padding: 0.6rem;
+            padding: 0.65rem;
             border-radius: 6px;
             cursor: pointer;
             border: none;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
             text-align: center;
         }
 
         .btn-submit {
-            background-color: var(--accent);
+            background-color: var(--accent-corporate);
             color: #ffffff;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
         }
 
         .btn-submit:hover {
@@ -510,19 +563,21 @@
         }
 
         .btn-clear {
-            background-color: var(--form-btn-clear);
-            color: var(--text-primary);
+            background-color: var(--tag-bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-light);
         }
 
         .btn-clear:hover {
-            background-color: var(--form-btn-clear-hover);
+            background-color: #e2e8f0;
+            color: var(--text-primary);
         }
 
         footer {
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border);
+            padding: 3rem 0 1rem 0;
+            margin-top: 5rem;
+            border-top: 1px solid var(--border-light);
             color: var(--text-secondary);
             font-size: 0.85rem;
         }
@@ -564,19 +619,19 @@
                     <div class="highlights-grid">
                         <div class="stat-card">
                             <strong>$100,000+ Operational Savings</strong>
-                            Negotiated structural wireless service contract terms saving the organization over 100K over 3 years.
+                            <p>Negotiated structural wireless service contract terms saving the organization over 100K over 3 years.</p>
                         </div>
                         <div class="stat-card">
                             <strong>$50,000/yr & 13 Days</strong>
-                            Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs.
+                            <p>Migrated 400+ corporate devices from Workspace One to Intune in record time, slashing annual licensing costs.</p>
                         </div>
                         <div class="stat-card">
                             <strong>President's Award Recipient</strong>
-                            Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence.
+                            <p>Honored with the Canon Americas President Award and multiple Canon Canada President Awards for deployment excellence.</p>
                         </div>
                         <div class="stat-card">
                             <strong>200+ Hours Recovered</strong>
-                            Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows.
+                            <p>Eliminated device configuration latency by architecting automated Apple Business Manager protocol flows.</p>
                         </div>
                     </div>
                 </section>
@@ -584,11 +639,11 @@
                 <section aria-labelledby="portfolio-title">
                     <h2 id="portfolio-title">AI Projects & Technical Innovation</h2>
 
-                    <article class="job-card" style="border-left: 4px solid #10b981;">
+                    <article class="job-card" style="border-top: 3px solid #10b981;">
                         <div class="job-header">
                             <div>
-                                <span class="job-title" style="color: #10b981;">Enterprise Sales & Logistics Opportunity CRM</span><br>
-                                <span class="job-company">Independent Software Architecture Initiative</span>
+                                <span class="job-title" style="color: #0f172a;">Enterprise Sales & Logistics Opportunity CRM</span><br>
+                                <span class="job-company" style="color: #10b981; font-weight: 600;">Independent Software Architecture Initiative</span>
                             </div>
                             <span class="job-date">Continuous Innovation</span>
                         </div>
@@ -600,11 +655,11 @@
                         </ul>
                     </article>
 
-                    <article class="job-card" style="border-left: 4px solid #3b82f6;">
+                    <article class="job-card" style="border-top: 3px solid #3b82f6;">
                         <div class="job-header">
                             <div>
-                                <span class="job-title" style="color: #3b82f6;">Applied AI & Automated Workflow Engineering</span><br>
-                                <span class="job-company">Self-Directed Systems Integration Portfolio</span>
+                                <span class="job-title" style="color: #0f172a;">Applied AI & Automated Workflow Engineering</span><br>
+                                <span class="job-company" style="color: #3b82f6; font-weight: 600;">Self-Directed Systems Integration Portfolio</span>
                             </div>
                             <span class="job-date">Continuous Innovation</span>
                         </div>
@@ -694,8 +749,8 @@
                     <div class="skills-group">
                         <h3>Hardware Expert Portfolios</h3>
                         <div class="skills-tags">
-                            <span class="tag" style="border-color: var(--accent); color: white;">imageFORCE Line</span>
-                            <span class="tag" style="border-color: var(--accent); color: white;">imageFORMULA Line</span>
+                            <span class="tag" style="background-color: #dbeafe; color: #1e40af; font-weight: 600;">imageFORCE Line</span>
+                            <span class="tag" style="background-color: #dbeafe; color: #1e40af; font-weight: 600;">imageFORMULA Line</span>
                             <span class="tag">IX-R7000 Platform</span>
                             <span class="tag">CX-G2400 Terminal</span>
                             <span class="tag">CX-G6400 Terminal</span>
@@ -739,20 +794,20 @@
 
                 <section aria-labelledby="certs-title">
                     <h2 id="certs-title">Certifications</h2>
-                    <div class="job-card" style="margin-bottom: 0; padding: 1rem;">
-                        <strong>ITIL Foundations 4</strong>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Issued Sept 2020</p>
+                    <div class="job-card" style="margin-bottom: 0; padding: 1.25rem;">
+                        <strong style="color: #0f172a; font-size: 1rem;">ITIL Foundations 4</strong>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.15rem;">Issued Sept 2020</p>
                     </div>
                 </section>
 
                 <section aria-labelledby="edu-title" style="margin-top: 3rem;">
                     <h2 id="edu-title">Education</h2>
-                    <div style="font-size: 0.95rem; margin-bottom: 1rem;">
-                        <strong>Network Engineering Studies</strong><br>
+                    <div style="font-size: 0.95rem; margin-bottom: 1.25rem;">
+                        <strong style="color: #0f172a;">Network Engineering Studies</strong><br>
                         <span style="color: var(--text-secondary); font-size: 0.85rem;">Xintra Computer College, Mississauga, ON</span>
                     </div>
                     <div style="font-size: 0.95rem;">
-                        <strong>High School Diploma</strong><br>
+                        <strong style="color: #0f172a;">High School Diploma</strong><br>
                         <span style="color: var(--text-secondary); font-size: 0.85rem;">Michael Power St. Joseph HS, Toronto, ON</span>
                     </div>
                 </section>
@@ -803,7 +858,7 @@
 
                 <section aria-labelledby="contact-form-title" style="margin-top: 3rem;">
                     <h2 id="contact-form-title">Contact Me</h2>
-                    <form id="portfolio-contact-form" onsubmit="handleFormSubmission(event)" style="background: var(--bg-secondary); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border);">
+                    <form id="portfolio-contact-form" onsubmit="handleFormSubmission(event)" style="background: var(--card-bg); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);">
                         
                         <div class="form-group">
                             <label for="contact-name">Full Name *</label>
@@ -832,7 +887,7 @@
         </div>
 
         <footer>
-            <p>2026 Manuel Orellana</p>
+            <p>&copy; 2026 Manuel Orellana</p>
         </footer>
 
     </div>
@@ -842,7 +897,7 @@
         let activeCarouselIndex = 0;
         const carouselSlides = document.querySelectorAll('.carousel-item');
         const indicatorDots = document.querySelectorAll('.indicator-dot');
-        let autoScrollTimerInstance = setInterval(() => shiftCarouselSlide(1), 5000); // Transitions slide every 5000ms
+        let autoScrollTimerInstance = setInterval(() => shiftCarouselSlide(1), 5000);
 
         function updateCarouselUILayout() {
             carouselSlides.forEach((slide, idx) => {
@@ -857,7 +912,6 @@
         }
 
         function shiftCarouselSlide(directionOffset) {
-            // Reset rotation timer upon manual interaction loop to safeguard layout reading metrics
             clearInterval(autoScrollTimerInstance);
             
             activeCarouselIndex += directionOffset;
